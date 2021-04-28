@@ -1,0 +1,92 @@
+ion-label.color{
+  color: #f4f5f8;
+}
+
+ion-label.colorb{
+  color: #000000;
+}
+ion-content.background{
+  --ion-background-color: #000000 ;
+}
+
+.item{
+border-radius: 10px;
+}
+
+ion-label{
+  font-size: large;
+  color: #09ff00;
+}
+
+ion-button.color{
+  --background: transparent;
+  color: #09ff00;
+}
+
+img.sis{
+  width: 50px;
+}
+
+
+ion-card.verd{
+  --background: hsl(170, 90%, 61%);
+  text-align: center;
+}
+
+ion-label.colorb{
+  color: #000000;
+}
+
+.avatar{
+  width: 10%;
+}
+
+ion-input{
+  color: whitesmoke;
+}
+
+ion-textarea{
+  color: whitesmoke;
+}
+ion-footer.background{
+  --background: #000000;
+}
+
+ion-toolbar.color{
+  --background: #202020 ;
+  --border-width: 5px;
+
+}
+.message-input {
+  width: 100%;
+  border: 1px solid var(--ion-color-secondary);
+  border-radius: 6px;
+  background: rgb(0, 0, 0);
+  resize: none;
+  margin-top: 0px;
+  --padding-start: 8px;
+  color: whitesmoke;
+}
+
+.message {
+  padding: 10px !important;
+  border-radius: 10px !important;
+  margin-bottom: 4px !important;
+  white-space: pre-wrap;
+}
+
+.my-message {
+  background: var(--ion-color-tertiary);
+  color: #fff;
+}
+
+.other-message {
+  background: var(--ion-color-secondary);
+  color: #fff;
+}
+
+.time {
+  color: #dfdfdf;
+  float: right;
+  font-size: small;
+}

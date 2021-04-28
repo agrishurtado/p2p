@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary">
+    <img class="avatar" slot="end" src="\assets\icons\imagenlogo-Avatar.png" [routerLink]="['/home', id]">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back" [routerLink]="['/home', id]"></ion-icon>
+
+    COMUNICADOS
+
+  </ion-toolbar>
+</ion-header>
+<ion-content class="background">
+  <div align="center" class="conte">
+    <br>
+    <br>
+    <ion-button fill="outline" expand="block" id="r" routerLink="/comunicados-redactar" padding expand="block">REDACTAR
+    </ion-button>
+    <br>
+    <ion-card>
+      <ion-list >
+        <ion-item-sliding *ngFor="let comunicado of registro; let indexOfelement=index;" class="table">     
+          <ion-grid > 
+            <h1 class="colorsolo">Comunicado</h1>   
+            <ion-row button [routerLink]="['/comunicados-redactar', comunicado.id]">                        
+              <ion-col>
+                <div align="left">
+                  {{indexOfelement + 1 }}.-{{comunicado.titulo}} <br>{{comunicado.fechaHora}}                
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <img class="im" slot="end" src="{{ comunicado.image }}">
+          <br>
+          <br>
+        </ion-item-sliding>
+      </ion-list>
+
+    </ion-card>
+  </div>
+
+</ion-content>

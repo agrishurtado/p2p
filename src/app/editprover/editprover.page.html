@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary">
+    <img class="avatar" slot="end" src="\assets\icons\imagenlogo-Avatar.png" [routerLink]="['/home', id]">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back" routerLink="/ver-contactos-p"></ion-icon>
+    Configuración
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+
+  <ion-fab  vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="updatePost(post)" color="success" >
+      <ion-icon color="danger" name="pencil"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <br>
+  <br>
+  <br>
+  <div id="conteazul" align="center">
+
+    <h1 id="text">Editar Condomino</h1>
+
+    <div id="conte1" align="center">
+
+      <!-- solo se podra ingresar un registro por domicilio -->
+      <ion-item>
+        <ion-label style="color: whitesmoke;" position="floating">Domicilio</ion-label>
+        <ion-input required [(ngModel)]="post.domicilio"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label style="color: whitesmoke;" position="floating">Nombre</ion-label>
+        <ion-input required [(ngModel)]="post.nombre"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label  style="color: whitesmoke;" position="floating">Teléfono</ion-label>
+        <ion-input required [(ngModel)]="post.telefono"></ion-input>
+      </ion-item>
+      
+    </div>
+  </div>
+  <br>
+
+  <div id="conteazul" align="center">
+    <h1 id="text" class="ion-text-wrap">Configurar Condomino</h1>
+    <div id="conte1" align="center">
+
+      <ion-card mode="ios">
+        <ion-item>
+          <ion-toggle slot="start" [(ngModel)]="post.accede" color="danger"></ion-toggle>
+          <ion-label class="ion-text-wrap" style="color: whitesmoke;">Activar Cuenta (Activo/Desactivo)</ion-label>       
+        </ion-item>
+      </ion-card>
+<!-- 
+
+
+
+
+ -->
+      <ion-item>
+        <ion-toggle slot="start" [(ngModel)]="post.actdesacc" color="primary"></ion-toggle>
+        <ion-label id="sis" class="ion-text-wrap" style="color: whitesmoke;">Accesos (Activo/Desactivo)</ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-toggle slot="start" [(ngModel)]="post.actdesmsn" color="secondary"></ion-toggle>
+        <ion-label class="ion-text-wrap" style="color: whitesmoke;">Mensajes (Activo/Desactivo)</ion-label>       
+      </ion-item>
+
+      <ion-item>
+        <ion-toggle slot="start" [(ngModel)]="post.actdesbal" color="tertiary"></ion-toggle>
+        <ion-label id="sis" class="ion-text-wrap" style="color: whitesmoke;">Balance (Activo/Desactivo)</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-toggle slot="start" [(ngModel)]="post.actdesenc" color="success"></ion-toggle>
+        <ion-label id="sis" class="ion-text-wrap" style="color: whitesmoke;">Encuestas (Activo/Desactivo)</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-toggle slot="start" [(ngModel)]="post.actdescomu" color="warning"></ion-toggle>
+        <ion-label id="sis" class="ion-text-wrap" style="color: whitesmoke;">Comunicados (Activo/Desactivo)</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-toggle slot="start" [(ngModel)]="post.actdespay" color="danger"></ion-toggle>
+        <ion-label id="sis" class="ion-text-wrap" style="color: whitesmoke;">Pagos (Activo/Desactivo)</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-toggle slot="start" [(ngModel)]="post.actdesreser" color="dark"></ion-toggle>
+        <ion-label id="sis" class="ion-text-wrap" style="color: whitesmoke;">Reservaciones (Activo/Desactivo)</ion-label>
+      </ion-item>
+      
+      <ion-item>
+        <ion-toggle slot="start" [(ngModel)]="post.actdesmark" color="medium"></ion-toggle>
+        <ion-label class="ion-text-wrap" style="color: whitesmoke;">Market (Activo/Desactivo)</ion-label>
+      </ion-item>
+      
+
+
+      <ion-item>
+        <ion-toggle slot="start" [(ngModel)]="post.actdesos" color="light"></ion-toggle>
+        <ion-label id="sis" class="ion-text-wrap" style="color: whitesmoke;">S.O.S (Activo/Desactivo)</ion-label>
+      </ion-item>
+      
+ 
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,88 @@
+
+.top{
+  margin: 20px;
+}
+
+ion-button{
+  height:75px;
+ // width: 400px;
+ outline-color: dodgerblue;
+
+}
+ion-content.background{
+  --ion-background-color: #16171a;
+}
+ion-label{
+  color: #f4f5f8;
+  
+}
+
+ion-content.background{
+  --ion-background-color: #000000 ;
+}
+
+ion-button{
+  width: 100%;
+ 
+}
+
+
+
+img{
+  width: 35px;  
+  
+}
+
+label{
+  font-size:13px;
+  color: whitesmoke;
+}
+
+
+.tor{
+  font-size: 15px;
+}
+
+
+
+.return{
+  color: whitesmoke;
+  font-size: 25px;
+}
+
+.avatar{
+  width: 10%;
+}
+
+#grad {
+  height: 100px;
+  background-image: linear-gradient(#428cff, black);
+  text-align: center;
+  font-size: 100%;
+}
+#grado {
+  height: 105px;    
+  background-image: linear-gradient(#428cff, black);
+
+}
+#grados {    
+  background-image: linear-gradient(#428cff, black);
+
+}
+
+
+ion-button{
+  height:70px;
+ //width: 130px;
+ text-overflow: 25px;
+ border-radius: 15px;
+ border: 6px inset rgb(0, 183, 255);
+ --background: transparent;
+
+}
+
+.red{
+  border: 6px inset red;
+
+
+}

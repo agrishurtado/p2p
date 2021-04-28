@@ -1,0 +1,77 @@
+<ion-header>  
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"routerLink="/home">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"routerLink="/tipos-visitas"></ion-icon>
+
+        REGISTRAR 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content align="center" class="background">
+  <div id="conte" align="center">
+    <ion-list lines="full">
+      <ion-item *ngIf="visita">
+        <ion-label class="color" position="floating" style="color: white;font-size: initial;">Nombre</ion-label>
+        <ion-input [(ngModel)]='visita.nombre' required style="color:  white;font-size: initial;"></ion-input>
+      </ion-item>
+      <ion-item mode="ios">
+        <ion-label style="color: whitesmoke;">Fecha</ion-label>
+        <input style="color: rgb(3, 105, 105);" type="date" name="cumpleanios" step="1" min="2020-01-01" max="2023-12-31"
+        [(ngModel)]="visita.fecha">
+      </ion-item>
+      <!-- <ion-item>
+        <ion-label class="color" position="floating" style="color: white;font-size: initial;"> Fecha</ion-label>
+        <ion-datetime [(ngModel)]="visita.fechaHora" style="color: white;font-size: initial;" displayFormat="DD MMM YYYY " min="1989-06-04" max="2050-08-23" value="1994-12-15"></ion-datetime>
+      </ion-item> -->
+
+      <ion-item>
+        <ion-label class="color" position="floating" style="color: white;font-size: initial;">Tipo de Fecha</ion-label>
+        <ion-select style="color: white;font-size: initial;"  interface="action-sheet"    [(ngModel)]="visita.tipoFecha" required class="color" >
+          <ion-select-option value="completo">Unica</ion-select-option>
+          <ion-select-option value="Indefinida">Indefinida</ion-select-option>
+          <!-- <ion-select-option value="Acceso">Fiesta</ion-select-option> -->
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="color" position="floating" style="color: white;font-size: initial;">Tipo de Visita</ion-label>
+        <ion-select style="color: white;font-size: initial;"  interface="action-sheet"    [(ngModel)]="visita.tipo" required class="color" >
+          <ion-select-option value="Empleado">Empleado</ion-select-option>
+          <ion-select-option value="familiar ">Familiar</ion-select-option>
+          <ion-select-option value="proveedor">Proveedor</ion-select-option>
+          <ion-select-option value="uber">Uber</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- <ion-item class="center" *ngIf="myAngularQRCode">
+        <qrcode  [qrdata]="myAngularQRCode" [size]="550" [level]="'M'"></qrcode>
+      </ion-item> -->
+
+      <ion-item>
+        <ion-label style="color: white;font-size: initial;" >Clave de acceso</ion-label> 
+        <ion-input style="color: white;font-size: initial;"   [(ngModel)]="visita.clave" placeholder="Ingresa Clave"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label style="color: white;font-size: initial;">Domicilio</ion-label>
+        <ion-input style="color: white;font-size: initial;"   [(ngModel)]="visita.domicilio" placeholder="Ingresa Domicilio"></ion-input>
+
+        <!-- <ion-select  [(ngModel)]="visita.domicilio"  >
+          <ion-select-option  value="{{post.nombre}}" *ngFor="let post of registro">{{post.domicilio }}</ion-select-option>
+        </ion-select> -->
+      </ion-item>
+      
+    </ion-list>
+    <br>
+    <!-- <ion-button color="danger" (click)="createQRCode()" >
+      <ion-icon slot="start" name="create"></ion-icon> Generar Código
+    </ion-button> -->
+    <ion-input class="input-who"  [(ngModel)]="visita.who"></ion-input>
+
+       <ion-button fill="outline" expand="block" id="r" padding  expand="block" (click)="updatePost(visita);">GUARDAR</ion-button>
+  </div> 
+</ion-content>
+
+
+
+

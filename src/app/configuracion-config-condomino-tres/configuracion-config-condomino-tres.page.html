@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"routerLink="/home">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"routerLink="/configuracion-config-condomino-dos"></ion-icon>
+        REGISTRO CONDOMINO
+        
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+  <div id="d">
+    <br>
+      <div id="conte"align="center">
+        <h1 id="text">Vigilancia</h1>
+        <div id="conte1" align="center">
+          <ion-item>
+            <ion-label class="color" >Registrar Placas</ion-label>
+          </ion-item>
+          <ion-segment [(ngModel)]="post.registrarplacas" color="success" (ionChange)="segmentChanged($event)" value="javascript">
+            <ion-segment-button value="Activar">
+              <ion-label color="primary" >Activar</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="Desactivar">
+              <ion-label color="primary" >Desactivar</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+          
+          <ion-item >
+            <ion-label class="color">Pedir INE</ion-label>
+          </ion-item>
+          <ion-segment [(ngModel)]="post.pedirine" color="success" (ionChange)="segmentChanged($event)" value="javascript">
+            <ion-segment-button value="Activar">
+              <ion-label color="primary" >Activar</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="Desactivar">
+              <ion-label color="primary" >Desactivar</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+          <ion-item >
+            <ion-label class="color">Mostrar Directorio de Residentes</ion-label>
+          </ion-item>
+          <ion-segment  [(ngModel)]="post.verdirectorioresidentes" color="success" (ionChange)="segmentChanged($event)" value="javascript">
+            <ion-segment-button value="Activar">
+              <ion-label color="primary" >Activar</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="Desactivar">
+              <ion-label color="primary" >Desactivar</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+          
+          <ion-item >
+            <ion-label class="color">Recibir Mensaje de Condominos </ion-label>
+          </ion-item>        
+          <ion-segment [(ngModel)]="post.recibirmensajescondominos" color="success" (ionChange)="segmentChanged($event)" value="javascript">
+            <ion-segment-button value="Activar">
+              <ion-label color="primary" >Activar</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="Desactivar">
+              <ion-label color="primary" >Desactivar</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        <br>
+        <ion-button (click)="createPostVigilancia(post)" fill="outline" class="color" position="floating">Agregar</ion-button>
+
+        </div>    
+      </div>  
+    <br>
+    
+    <br>
+
+        <div id="conteazul"align="center">
+          <h1 id="text">Visitas</h1>
+          <div id="conte1" align="center">
+            <ion-item>
+              <ion-label class="color" position="floating">Agregar Tipo de Visita</ion-label>
+              <ion-input [(ngModel)]="post.agregartipovisita" ></ion-input>
+            </ion-item>
+          
+
+            <ion-item>
+              <ion-label class="color">Acceso Solo Programadas</ion-label>
+            </ion-item> 
+            <ion-segment  [(ngModel)]="post.accesososoloprogramados" color="success" (ionChange)="segmentChanged($event)" value="javascript">
+              <ion-segment-button value="Activar">
+                <ion-label color="success" >Activar</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="Desactivar">
+                <ion-label color="success" >Desactivar</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+
+            <ion-item >
+              <ion-label class="color" position="floating">Cantidad de Acceso Vehiculos</ion-label>
+              <ion-input [(ngModel)]="post.cantidadaccesosvehiculares" ></ion-input>
+            </ion-item> 
+            <br>           
+               <ion-button (click)="createPostVisitas(post)" fill="outline" class="color" position="floating">Agregar</ion-button>
+          </div>    
+        </div>  
+    <br>
+    <br>
+    <br>
+
+        
+      
+      <br>
+  
+</div>
+
+</ion-content> 

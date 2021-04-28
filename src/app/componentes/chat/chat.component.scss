@@ -1,0 +1,50 @@
+ion-content.background{
+    --ion-background-color: #000000 ;
+  }
+  
+  .item{
+  border-radius: 10px;
+  }
+  
+  ion-label{
+    font-size: large;
+    color: #09ff00;
+  }
+  
+  ion-button.color{
+    --background: transparent;
+    color: #09ff00;
+  }
+  
+  img.sis{
+    width: 50px;
+  }
+  
+  
+  ion-card.verd{
+    --background: hsl(170, 90%, 61%);
+    text-align: center;
+  }
+  
+  ion-label.colorb{
+    color: #000000;
+  }
+  
+  .avatar{
+    width: 10%;
+  }
+  
+  ion-label{
+    color: whitesmoke;
+  }
+  
+  ion-textarea{
+    color: whitesmoke;
+  }
+  
+  
+  ion-toolbar.color{
+    --background: #2f2f2f ;
+    --border-width: 5px;
+  
+  }

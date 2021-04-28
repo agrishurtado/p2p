@@ -1,0 +1,112 @@
+<ion-header>  
+  <ion-toolbar color="primary">
+    <ion-row >
+      <ion-col size="2"> 
+        <ion-icon  routerLink="/clasificados" class="return" name="arrow-back"  ></ion-icon>  </ion-col>
+
+      <ion-col align="center" size="8">
+
+        CREAR CLASIFICADO
+    
+      </ion-col>
+      <ion-col size="2" >
+          <img [routerLink]="['/home', id]" src="\assets\icons\imagenlogo-Avatar.png">
+      </ion-col>          
+    </ion-row> 
+  </ion-toolbar>
+</ion-header>
+<ion-content class="background">
+  <div class="conte" align="center">
+    <ion-card>
+      <ion-list lines="full">
+        <ion-item *ngIf="clasificado">
+          <ion-label class="color" position="floating" style="color: white;font-size: initial;">Nombre Condomino</ion-label>
+          <ion-input required [(ngModel)]='clasificado.nombre' style="color: white;"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="clasificado">
+          <ion-label class="color" position="floating" style="color: white;font-size: initial;">Tel&eacute;fono</ion-label>
+          <ion-input required [(ngModel)]='clasificado.telefono' style="color: white;"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="clasificado">
+          <ion-label class="color" position="floating" style="color: white;font-size: initial;">Precio</ion-label>
+          <ion-input required [(ngModel)]='clasificado.precio' style="color: white;"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="clasificado">
+          <ion-label class="color" position="floating" style="color: white;font-size: initial;">Producto</ion-label>
+          <ion-input required [(ngModel)]='clasificado.producto' style="color: white;"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="clasificado">
+          <ion-label class="color" position="floating" style="color: white;font-size: initial;">Descripci&oacute;n</ion-label>
+          <ion-input required [(ngModel)]='clasificado.descripcion' style="color: white;"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label  style="color: white;font-size: initial;" align="center">Ingresar Fecha</ion-label>
+          <ion-datetime [(ngModel)]="clasificado.fecha" displayFormat="MMM YYYY" min="1989-06-04" max="2050-08-23" value="1994-12-15T13:47:20.789"></ion-datetime>
+      </ion-item>        
+      </ion-list>          
+    </ion-card>
+    <br>
+    <br>
+    <ion-button (click)="loadImageFromDevice()" >
+      <ion-icon lazy="true" slot="start" name="image" style="color: white; font-size: 20px;"></ion-icon>
+      Tomar foto o seleccionar de galeria.
+    </ion-button>
+    <br>
+    <br>
+      <ion-button fill="outline" expand="block" id="r" padding  expand="block" (click)="saveClasificado();">GUARDAR</ion-button>   
+  </div>
+</ion-content>
+<!-- 
+  
+    <ion-card>
+<ion-grid>
+  <ion-row >
+    <ion-col size="12">   
+      <ion-item>
+        <ion-button fill="outline" expand="block" padding id="conteButton" expand="block">Publicar</ion-button>
+      </ion-item> 
+       </ion-col>
+    <ion-col size="12">
+      <ion-item id="vaca">
+        <ion-label position="fixed">Nombre Condomino</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+          </ion-col>
+    <ion-col size="12" >
+      <ion-item id="vaca">
+        <ion-label position="fixed">Telefono</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+          </ion-col>  
+          <ion-col size="12">
+            <ion-item id="vaca">
+              <ion-label position="fixed">Precio</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+                </ion-col>
+          <ion-col size="12" >
+            <ion-item id="vaca">
+              <ion-label position="fixed">Producto</ion-label>
+              <ion-input></ion-input>
+            </ion-item>
+                </ion-col>  
+                <ion-col size="12" id="m"> 
+                  <ion-item id="vaca">
+                    <ion-label position="fixed">Descripcion</ion-label>
+                    <ion-input></ion-input>
+                  </ion-item>
+                      </ion-col>  
+                                  
+              <ion-col size="12" padding="0%">    
+                <ion-icon id="imagen" name="images-sharp"></ion-icon>   <ion-input></ion-input>
+               </ion-col>
+             
+  </ion-row >
+ 
+  
+</ion-grid>
+</ion-card>
+
+
+</ion-content> 
+   -->

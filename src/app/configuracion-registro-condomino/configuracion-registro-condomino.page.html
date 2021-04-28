@@ -1,0 +1,140 @@
+<ion-header>  
+  <ion-toolbar class="ion-text-center" color="primary">
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png" [routerLink]="['/home', id]">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"routerLink="/configuracion"></ion-icon>
+
+        REGISTROS
+        
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="background">
+
+  <div id="conte"align="center">
+
+    <h1 id="text">Registro de Condómino</h1>
+
+    <div id="conte1" align="center">
+
+      <ion-item >
+        <ion-label class="color" position="floating">Nombre</ion-label>
+        <ion-input [(ngModel)]="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="color" position="floating">E-mail</ion-label>
+        <ion-input [(ngModel)]="email" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="color" position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password" ></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label class="color" position="floating">Domicilio</ion-label>
+        <ion-input [(ngModel)]="domicilio" ></ion-input>
+      </ion-item>
+
+      <ion-item disabled="true">
+        <ion-label class="color" position="floating">Fraccionamiento</ion-label>
+        <ion-input [(ngModel)]="nfraccionamiento" value="{{ posts.nfraccionamiento }}"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label class="color" position="floating">Teléfono</ion-label>
+        <ion-input [(ngModel)]="telefono"></ion-input>
+      </ion-item>
+       <ion-item >
+        <ion-label class="color" position="floating">Saldo</ion-label>
+        <ion-input [(ngModel)]="sald" type="number"></ion-input>
+      </ion-item> 
+
+        <ion-label>Imagen del Coto</ion-label>
+        <button id="añadirs"><input type="file" (change)="loadImageFromDevice($event)" id="file-input" accept="image/png, image/jpeg" style="font-size: x-small;">
+          <ion-icon name="image" slot="start" size="large"></ion-icon></button>
+      <br>
+      <!--  -->
+      <ion-list>      
+        <ion-item color="medium">
+          <ion-label class="ion-text-left" class="color">Tipo</ion-label>
+          <ion-select class="ion-text-left" [(ngModel)]="tipo" okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="condomino">Condomino</ion-select-option>
+            <ion-select-option value="directiva">Directiva</ion-select-option>
+            <ion-select-option value="proveedor">Proveedor</ion-select-option>
+          </ion-select>
+        </ion-item>
+      
+      </ion-list>
+      <!--  -->
+      <ion-button  id="añadir" (click)="onSubmitRegistro()">Guardar</ion-button>
+      
+     
+    </div>     
+  </div>  
+ <br>
+ 
+  
+<br>
+
+  <div id="contes"align="center">
+
+    <h1 id="text">Registro de Vigilante</h1>
+
+    <div id="conte1" align="center">
+
+      <ion-item >
+        <ion-label class="color" position="floating">Nombre</ion-label>
+        <ion-input [(ngModel)]="nombreV"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="color" position="floating">E-mail</ion-label>
+        <ion-input [(ngModel)]="emailV" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="color" position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="passwordV" ></ion-input>
+      </ion-item>
+      
+      <!-- <ion-item>
+        <ion-label class="color" position="floating">Domicilio</ion-label>
+        <ion-input [(ngModel)]="domicilio" ></ion-input>
+      </ion-item> -->
+
+      <ion-item >
+        <ion-label class="color" position="floating">Teléfono</ion-label>
+        <ion-input [(ngModel)]="telefonoV"></ion-input>
+      </ion-item>
+      <!-- <ion-item >
+        <ion-label class="color" position="floating">Saldo</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item> -->
+
+      
+      <br>
+      <!--  -->
+      <ion-list>      
+        <ion-item color="medium">
+          <ion-label class="color">Tipo</ion-label>
+          <ion-select [(ngModel)]="tipoV" okText="Okay" cancelText="Dismiss">
+            <ion-select-option value="caseta">Vigilante</ion-select-option>
+          </ion-select>
+        </ion-item>
+      
+      </ion-list>
+      <!--  -->
+      <ion-button  id="añadirb" (click)="onSubmitRegistroB()">Guardar</ion-button>
+      
+     
+    </div>    
+  </div>
+
+
+<br>
+
+
+
+</ion-content> 

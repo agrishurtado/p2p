@@ -1,0 +1,67 @@
+.top{
+  margin: 20px;
+}
+
+ion-button{
+  height:100px;
+ width: 130px;
+ outline-color: rgb(75, 155, 111);
+ border-radius: 55px;
+ text-overflow: 25px;
+}
+ion-card{
+  padding-top: 55px;
+  --background: none;
+
+}
+
+ion-label{
+  color: #f4f5f8;
+}
+
+ion-content.background{
+  --ion-background-color: #000000 ;
+}
+
+img{
+  width: 60px;
+  background-position-x: 50cm;
+}
+
+ion-button.text{
+  font-size: 30px;
+}
+ion-button.textb{
+  font-size: 15px;
+  text-align: center;
+}
+
+
+
+ion-button.bord{
+  height:90px;
+ //width: 130px;
+ text-overflow: 25px;
+ border-radius: 10px;
+ border: 6px double rgb(0, 183, 255);
+ --background: transparent;
+}
+
+ion-button.bordo{
+  height:90px;
+ //width: 130px;
+ text-overflow: 25px;
+ border-radius: 10px;
+ border: 6px double rgb(0, 255, 149);
+ --background: transparent;
+}
+
+ion-button.borda{
+  height:90px;
+ //width: 130px;
+ text-overflow: 25px;
+ border-radius: 10px;
+ border: 6px double rgb(255, 0, 0);
+ --background: transparent;
+}
+

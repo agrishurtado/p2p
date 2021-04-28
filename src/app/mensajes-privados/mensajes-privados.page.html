@@ -1,0 +1,265 @@
+<ion-header>
+  <ion-toolbar color="primary" >
+    <ion-icon class="color" size="large" slot="start" name="arrow-back" [routerLink]="['/menumensajes']"></ion-icon>
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png" [routerLink]="['/home', id]">
+    <ion-title class="ion-text-center">MENSAJES</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="background">
+  <b>
+  <ion-card class="verd">
+    <ion-label class="colorb" >Contactos</ion-label>
+  </ion-card>
+  </b>
+  
+  <ion-card>
+    
+    <ion-list>
+      <ion-item *ngFor="let post of access ">
+        <ion-avatar slot="start">
+          <img src="/assets/icon/usuario.png">
+        </ion-avatar>
+        <ion-label> 
+          <a href="https://api.whatsapp.com/send?phone=+521{{post.telefono}}">
+            <h3 style="color: whitesmoke;">{{ post.domicilio}}</h3> </a>          
+        </ion-label>
+      </ion-item>
+    </ion-list> 
+  </ion-card>
+
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- import { Component, OnInit } from '@angular/core';
+import * as firebase from "firebase";
+import { LoadingController, NavController, ToastController } from "@ionic/angular";
+import { AuthService } from '../services/auth.service';
+// import { LoadingController, ToastController } from '@ionic/angular';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { ActivatedRoute } from '@angular/router';
+
+@Component({
+  selector: 'app-mensajes-privados',
+  templateUrl: './mensajes-privados.page.html',
+  styleUrls: ['./mensajes-privados.page.scss'],
+})
+export class MensajesPrivadosPage implements OnInit {
+  ids: any;
+  id: any;
+  uid: string;
+  telefono: any;
+  users: any;
+  tipo: any;
+  user = [];
+ 
+
+  constructor(private nav: NavController, 
+              private actRoute: ActivatedRoute,              
+              private authService: AuthService,
+              private toastCtrl: ToastController,
+              private loadingCtrl: LoadingController,
+              private firestore: AngularFirestore,
+              private afAuth: AuthService) {
+     this.uid=localStorage.getItem("uid");
+
+    // firebase.firestore().collection("usuariocondomino").doc(this.uid).get().then(userData => {
+    //   this.users = userData.data()['users'];
+    //   this.tipo = userData.data()['tipo'];
+    //   this.telefono = userData.data()['telefono'];
+    // });
+
+    firebase.firestore().collection("condomino").get().then(userData => {
+      userData.forEach(childData => {
+        if(childData.data()['uid'] != this.uid){
+          this.user.push(childData.data());
+        }
+      });
+    });
+   }
+
+  ngOnInit() { 
+    this.afAuth.getUserAuth().subscribe(user => {
+      this.id = user.uid
+    });
+    this.authService.getUserAuth().subscribe(user => {
+      this.ids = user.uid;
+      
+      this.uid = user.uid;
+      console.log(user.uid)
+     });
+  }
+  ionViewWillEnter(){
+    this.getPosts();
+  } 
+  async getPosts(){
+    let loader = await this.loadingCtrl.create({
+      message: "please wait..."
+    });
+    loader.present();
+    try {
+      this.firestore.collection("condomino").snapshotChanges().subscribe(data => {
+        this.user = data.map(e => {
+          return {
+            id: e.payload.doc.id,
+            users: e.payload.doc.data()["users"],
+            telefono: e.payload.doc.data()["telefono"],
+            tipo: e.payload.doc.data()["tipo"]
+          };
+        });
+        // desaparece loader
+       loader.dismiss();
+      });
+    } catch (e) {
+      this.showToast(e);
+    }
+  }
+
+  // gotoChat(uid: string,users: string){
+  //   sessionStorage.setItem("uid",uid);
+  //   sessionStorage.setItem("users",users);
+
+  //   this.nav.navigateForward("/mensajes-contactos");
+
+  // }
+  showToast(message: string){
+    this.toastCtrl.create({
+      message: message,
+      duration: 3000
+    })
+    .then(toastData => toastData.present());
+  }
+
+  
+}
+    //             private toastCtrl: ToastController,
+    //             private loadingCtrl: LoadingController,
+    //             private firestore: AngularFirestore
+
+
+  // ionViewWillEnter(){
+  //   this.getPosts();
+  // } 
+//-----------agregar
+//   async getPosts(){
+//     let loader = await this.loadingCtrl.create({
+//       message: "please wait..."
+//     });
+//     loader.present();
+
+//     try {
+//       this.firestore
+//       .collection("usuariocondomino")
+//       .snapshotChanges()
+//       .subscribe(data => {
+//         this.users = data.map(e => {
+//           return {
+//             id: e.payload.doc.id,
+//             users: e.payload.doc.data()["users"],
+//             telefono: e.payload.doc.data()["telefono"],
+//             tipo: e.payload.doc.data()["tipo"]
+//           };
+//         });
+//         // desaparece loader
+//        loader.dismiss();
+//       });
+//     } catch (e) {
+//       this.showToast(e);
+//     }
+//   }
+// //-----------loading
+
+//   showToast(message: string){
+//     this.toastCtrl.create({
+//       message: message,
+//       duration: 3000
+//     })
+//     .then(toastData => toastData.present());
+//   }
+
+// }
+ -->

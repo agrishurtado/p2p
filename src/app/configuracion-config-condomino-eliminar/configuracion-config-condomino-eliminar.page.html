@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"[routerLink]="['/home', id]">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"routerLink="/configuracion"></ion-icon>
+
+        cuenta 
+        
+        
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="background">
+
+<br>
+  <div id="conte"  align="center">
+
+    <h1 id="text">Datos de tu cuenta banacaria</h1>
+
+   
+
+      <ion-list lines="none">
+        <ion-item-sliding *ngFor="let post of bank">
+          <ion-item class="no-padding" [routerLink]="['/configuracion-config-condomino-editar', post.id]">
+            <ion-label>
+              <h2>Banco: <h2 style="color: rgb(0, 153, 255);">{{ post.banco }}</h2></h2>
+              <h2>N°Cuenta: <h2 style="color: rgb(0, 153, 255);">{{ post.cuenta }}</h2></h2>
+              <h2>Clave: <h2 style="color: rgb(0, 153, 255);">{{ post.clave }}</h2></h2>
+              <h2>N°Tarjeta: <h2 style="color: rgb(0, 153, 255);">{{ post.tarjeta }}</h2></h2>
+              <h2>Saldo en Cuenta: <h2 style="color: rgb(0, 153, 255);"> ${{ post.saldocuenta }}</h2></h2>
+
+            </ion-label>
+          </ion-item>
+    
+        
+    
+        <ion-item-options side="end">
+          <ion-item-option color="danger" (click)="deletePost(post.id)"> 
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+  
+</div>
+
+<!-- ____________________________________________________________________________________ -->
+<div id="d">
+  <br>
+    <div id="conte"  align="center">
+  
+      <h1 id="text">Concepto Gastos</h1>
+  
+      <ion-list lines="none">
+        <ion-item-sliding *ngFor="let post of concept">
+          <ion-item class="no-padding" [routerLink]="['/configuracion-config-condomino-editar-dos', post.id]">
+            <ion-label>
+              <h2>Luz:<h2 style="color: rgb(0, 153, 255);">{{ post.luz }}</h2></h2>
+              <h2>Mantenimiento: <h2 style="color: rgb(0, 153, 255);">{{ post.mantenimiento }}</h2></h2>
+              <h2>Seguridad: <h2 style="color: rgb(0, 153, 255);">{{ post.seguridad }}</h2></h2>
+              <h2>Agua: <h2 style="color: rgb(0, 153, 255);">{{ post.seguridad }}</h2></h2>
+              <h2>Recoleccion de basura: <h2 style="color: rgb(0, 153, 255);">{{ post.seguridad }}</h2></h2>
+              <h2>Administrador: <h2 style="color: rgb(0, 153, 255);">{{ post.seguridad }}</h2></h2>
+              <h2>Jardinero: <h2 style="color: rgb(0, 153, 255);">{{ post.seguridad }}</h2></h2>
+              <h2>Aseo: <h2 style="color: rgb(0, 153, 255);">{{ post.seguridad }}</h2></h2>
+
+            </ion-label>
+          </ion-item>
+    
+        
+    
+        <ion-item-options side="end">
+          <ion-item-option color="danger" (click)="deletePostb(post.id)"> 
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+    </div>
+     <br>
+    
+  </div>
+
+  <!-- __________________________________________________________________________ -->
+
+  <div id="d">
+    <br>
+      <div id="conte"  align="center">
+    
+        <h1 id="text">Cuota</h1>
+    
+        <ion-list lines="none">
+          <ion-item-sliding *ngFor="let post of cuta">
+            <ion-item class="no-padding" [routerLink]="['/configuracion-config-condomino-editar-tres', post.id]">
+              <ion-label>
+                <h2>Dia de pago:<h2 style="color: rgb(0, 153, 255);">{{ post.diapago }}</h2> </h2>
+                <!-- <h2>Luz:<h2 style="color: rgb(0, 153, 255);">{{ post.luz }}</h2></h2> -->
+                <h2>Mantenimiento:<h2 style="color: rgb(0, 153, 255);">{{ post.mantenimiento }}</h2></h2>
+                <!-- <h2>Seguridad:<h2 style="color: rgb(0, 153, 255);">{{ post.seguridad }}</h2></h2> -->
+                <h2>Pago Demorado:<h2 style="color: rgb(0, 153, 255);">{{ post.pagotardio }}</h2></h2>
+              </ion-label>
+            </ion-item>
+      
+          
+      
+          <ion-item-options side="end">
+            <ion-item-option color="danger" (click)="deletePostb(post.id)"> 
+              <ion-icon slot="icon-only" name="trash"></ion-icon>
+            </ion-item-option>
+          </ion-item-options>
+          </ion-item-sliding>
+        </ion-list>
+      </div>
+       <br>
+      
+    </div>
+</ion-content> 

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="danger" [routerLink]="['/home', id]">
+    <ion-icon name="arrow-back" slot="start" size="large"></ion-icon>
+    <ion-title class="ion-text-center">S.O.S</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+<ion-card align="center" routerLink="/mensajes"> 
+  <ion-button class="borda"
+              expand block> 
+    <div>
+    <img src="\assets\icon\quedate-en-casa.png">
+    <br>
+    <ion-label>Médica</ion-label>
+   </div></ion-button>
+</ion-card>
+
+<ion-card align="center">
+  <ion-button class="bord" routerLink="/mensajes-policiacos">
+    <div>
+      <img src="\assets\icon\proteger.png">
+      <br>
+      <ion-label>Robo</ion-label> 
+     </div></ion-button>
+</ion-card>
+
+<ion-card align="center">
+  <ion-button  class="bordo" routerLink="/mensajes-siniestros">
+    <div>
+      <img src="\assets\icon\huracan.png">
+      <br>
+      <ion-label>Siniestro</ion-label> 
+     </div></ion-button>
+</ion-card>
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"[routerLink]="['/home', id]">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"routerLink="/configuracion-config-condomino-eliminar"></ion-icon>
+
+    CONFIGURACIÓN EDITAR
+        
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="background">
+  <div id="d">
+<br> 
+  <div id="conte"  align="center">
+
+      <h1 id="text">Cuotas</h1>
+  
+      <div id="conte1" align="center">
+  
+        <ion-item >
+          <ion-label class="color" position="floating">Día de pago</ion-label>
+          <ion-input type="number" [(ngModel)]="post.diapago" required ></ion-input>
+        </ion-item>
+<!--         
+        <ion-item>
+          <ion-label class="color" position="floating">Luz</ion-label>
+          <ion-input type="text" [(ngModel)]="post.luz" required></ion-input>
+        </ion-item> -->
+
+        <ion-item >
+          <ion-label class="color" position="floating">Mantenimiento</ion-label>
+          <ion-input type="number"  [(ngModel)]="post.mantenimiento"></ion-input>
+        </ion-item>   
+        
+        <!-- <ion-item >
+          <ion-label class="color" position="floating">Seguridad</ion-label>
+          <ion-input type="text"  [(ngModel)]="post.seguridad"></ion-input>
+        </ion-item> -->
+
+        <ion-item >
+          <ion-label class="color" position="floating">Pago Demorado</ion-label>
+          <ion-input type="number"  [(ngModel)]="post.pagotardio"></ion-input>
+        </ion-item>
+        
+       <br>
+  
+  
+   <ion-button (click)="updatePost(post)" fill="outline">Agregar</ion-button>
+       
+      </div>    
+    </div>
+  
+</div>
+
+</ion-content>

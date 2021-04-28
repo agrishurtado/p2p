@@ -1,0 +1,99 @@
+
+  
+#d{
+    height: auto;
+   padding: 0%;
+    transform: translateY(15%);
+    
+    background:gray;
+  }
+  ion-content.background{
+    --ion-background-color: #16171a;
+  }
+
+  ion-item , ino-textarea {
+  top	: 30%;
+   
+    width: 100%;
+
+  }
+  #ion{
+    width: 30%;
+  }
+  
+    ion-card{
+      //height: auto;
+     // padding-top: 0px ;
+     
+    margin: 0 auto;
+    transform: translateY(5px);
+    //background: gray;
+    padding-block-end: 5px;
+    width: 90%;
+    border-radius: 5px;
+  }
+
+  #conteButton{
+
+   width: 95%;
+ 
+}
+
+  
+  #conte1{
+    
+    height: 30%px;
+    width: 90%;
+  }
+  
+  ion-icon {
+    align-content: right;
+    font-size: 300%;
+    color: gray ;
+  }
+  #list-circle{
+      color: rgba(47, 47, 47, 0.829);
+      text-align: right;
+  }
+  
+  ion-title{
+    
+    font-size: medium;
+  }
+  #vaca{
+    background: red;
+    height: 35px;
+    width: 90%;
+  }
+
+  #imagen{
+    padding: 0%;
+    padding-inline-end: 0%;
+    font-size: 1420%;
+  }
+
+  ion-toolbar{
+  
+    font-size: 25px;
+  }
+  
+  .return{
+    color: whitesmoke;
+    font-size: 25px;
+  }
+
+  input#file-input{
+  
+    width: 80%;
+    height: 80%;
+    opacity: 0;
+  }
+  #añadir{
+    width: 25%;
+    height: 25%; 
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  #icon2{
+    width: 60%;
+  }

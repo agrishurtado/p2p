@@ -1,0 +1,65 @@
+<ion-header>  
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"[routerLink]="['/home', id]">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"routerLink="/configuracion"></ion-icon>
+
+        CONTRASEÑA
+        
+  </ion-toolbar>
+</ion-header>
+
+<!-- cuerpo -->
+
+<ion-content padding  class="background">
+<div id="d" align="center" >
+
+  <div id="conte"align="center">
+    <img src="../../assets/icon/auditoria.png" id="icon" />
+    <h1 id="text">Reenviar Contraseña</h1>
+
+   
+  <div id="conte1" align="center">
+  
+    <!-- <ion-form (submit)="sendLinkReset"> -->
+    <ion-item>
+      <ion-input type="text" [formControl]="userEmail" placeholder="Ingrese E-mail" ></ion-input>
+      <br>
+    </ion-item>
+  <!-- </ion-form> -->
+    <br>     
+   
+  </div>    
+ 
+  </div>  
+ <br>
+ <div id="conteButton" align="center">
+  <button (click)="onReset()"  id="añadir"><img src="../../assets/icon/enviar.png" id="icon2" /></button>
+</div> 
+ <br>
+ <br>
+
+    <!-- <div id="conteazul"align="center">
+      <img src="../../assets/icon/llave.png" id="icon" />
+      <h1 id="text">Generar Nueva Contraseña</h1>
+      <div  align="center">
+        <ion-item >
+          <ion-label color="light" position="floating">Domicilio</ion-label>
+          <ion-input></ion-input>
+        </ion-item>       
+        <br>
+       
+       
+      </div>    
+    </div>  
+<br>
+<div id="conteButton" align="center">
+  <button id="añadir"><img src="../../assets/icon/clave.png" id="icon2" /></button>
+</div>  -->
+<br>
+<br>
+
+   
+</div>
+
+
+</ion-content> 

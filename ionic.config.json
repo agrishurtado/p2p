@@ -1,0 +1,8 @@
+{
+  "name": "residenciales",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

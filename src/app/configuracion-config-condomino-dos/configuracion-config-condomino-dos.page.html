@@ -1,0 +1,142 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"[routerLink]="['/home', id]">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"routerLink="/configuracion-config-condomino"></ion-icon>
+
+    
+      REGISTRO CONDOMINO
+      
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding class="background">
+  <div id="d">
+    <br>
+      <div id="conte"align="center">
+        <h1 id="text">Reservables</h1>
+        <div id="conte1" align="center">         
+          
+          <ion-item >
+            <ion-label class="color" position="floating">Nombre</ion-label>
+            <ion-input [(ngModel)]="post.nombre" class="cool" ></ion-input>
+            </ion-item>
+            <ion-item>
+            <ion-label class="color" position="floating">costo</ion-label>
+            <ion-input [(ngModel)]="post.costo" class="cool"></ion-input>
+            </ion-item>
+            <ion-item>
+            <ion-label class="color" position="floating">Horario-Dias</ion-label>
+            <ion-input [(ngModel)]="post.horariodias" class="cool"></ion-input>
+          </ion-item>          
+          <ion-item >
+            <ion-label class="color" position="floating">Numero de Reservaciones por Mes</ion-label>
+            <ion-input [(ngModel)]="post.numreservasmes" class="cool" ></ion-input>
+          </ion-item>
+
+          <ion-item >
+            <ion-label class="color" position="floating">Numero de Reservaciones por Año</ion-label>
+            <ion-input [(ngModel)]="post.numreservasano" class="cool" ></ion-input>
+          </ion-item>        
+         
+            <br>
+           
+              <ion-button (click)=" createPostReservables(post)" expand="block" fill="outline" class="color" position="floating">Agregar</ion-button>
+              
+            
+        
+        </div>    
+      </div>  
+    <br>
+    
+    <br>
+
+        <div id="conteazul"align="center">
+          <h1 id="text">Morosos</h1>
+          <div id="conte1" align="center">
+            <ion-item >
+              <ion-label class="color" >Pueden Reservar</ion-label>
+            </ion-item>
+            <ion-segment [(ngModel)]="post.puedereservar" color="success" (ionChange)="segmentChanged($event)" value="javascript">
+              <ion-segment-button value="Activar">
+                <ion-label color="success" >Activar</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="Desactivar">
+                <ion-label color="success" >Desactivar</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+            
+            <ion-item >
+              <ion-label class="color" >Pueden Registrar Visistas</ion-label>
+            </ion-item>
+            <ion-segment [(ngModel)]="post.puederegistrarreserva" color="success" (ionChange)="segmentChanged($event)" value="javascript">
+              <ion-segment-button value="Activar">
+                <ion-label color="success" >Activar</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="Desactivar">
+                <ion-label color="success" >Desactivar</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+          
+            
+            <ion-item >
+              <ion-label class="color" >Mostrar Lista de Morosos</ion-label>
+            </ion-item>     
+            <ion-segment [(ngModel)]="post.mostrarlistamorosos"  color="success" (ionChange)="segmentChanged($event)" value="javascript">
+              <ion-segment-button value="Activar">
+                <ion-label color="success" >Activar</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="Desactivar">
+                <ion-label color="success" >Desactivar</ion-label>
+              </ion-segment-button>
+            </ion-segment>  
+            <br>
+            <ion-button (click)=" createPostMorosos(post)" expand="block" fill="outline" class="color" position="floating">Guardar</ion-button>
+ 
+          </div>    
+        </div>  
+    <br>
+    <br>
+    <br>
+
+        <div id="conte"align="center">
+
+          <h1 id="text">Folio</h1>
+      
+          <div id="conte1" align="center">
+      
+            <ion-item id="vaca">
+              <ion-label class="color">Generar Folio de pago</ion-label>
+            </ion-item>
+            <ion-segment [(ngModel)]="post.generarfoliopago" color="success" (ionChange)="segmentChanged($event)" value="javascript">
+              <ion-segment-button value="Activar">
+                <ion-label color="success" >Activar</ion-label>
+              </ion-segment-button>
+              <ion-segment-button value="Desactivar">
+                <ion-label color="success" >Desactivar</ion-label>
+              </ion-segment-button>
+            </ion-segment>
+            
+            <ion-item id="vaca">
+              <ion-label class="color" position="floating">Letra</ion-label>
+              <ion-input [(ngModel)]="post.letra" class="cool" ></ion-input>
+            </ion-item>
+            <ion-item id="vaca">
+              <ion-label class="color" position="floating">Numero</ion-label>
+              <ion-input [(ngModel)]="post.numero" class="cool"></ion-input>  
+            </ion-item>  
+            <br>
+            <ion-button (click)=" createPostFolio(post)" expand="block" fill="outline" class="color" position="floating">Guardar</ion-button>
+ 
+          
+          </div>    
+        </div>  
+      <br>
+      <div id="contebutton" align="center">
+        <button  id="añadir" align="center" routerLink="/configuracion-config-condomino-tres"><img src="../../assets/icon/cheuron.png" id="icon2" /></button>
+      </div>
+      <br>
+  
+</div>
+
+</ion-content> 

@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"[routerLink]="['/home', id]">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"routerLink="/configuracion"></ion-icon>
+
+        CONFIGURACION
+        
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="background">
+ <br>
+  <div id="d">
+
+  <div id="conte"  align="center">
+
+    <h1 id="text">Configuracion de Datos</h1>
+ <br>
+
+    <div id="conte1" align="center">
+      <ion-button expand="block" 
+        class="bord"  (click)="presentAlert()">
+          Registrar 
+        </ion-button>
+        <br>
+
+  
+       <ion-button expand="block" 
+        class="bordo" routerLink="/configuracion-config-condomino-dos">
+          Configuración extra
+        </ion-button>
+      <br>
+    
+        
+        <br>
+<!--        
+        <ion-button expand="block" 
+        class="bordo" (click)="presentAlert()">
+          Eliminar
+        </ion-button> -->
+   
+      
+      
+     
+    </div>    
+  </div>  
+ <br>
+ 
+
+  
+  
+</div>
+
+</ion-content> 

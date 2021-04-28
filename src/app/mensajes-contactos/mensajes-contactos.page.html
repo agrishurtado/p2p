@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary">
+    <img class="avatar" slot="end" src="\assets\icons\imagenlogo-Avatar.png"[routerLink]="['/home', id]">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"  [routerLink]="['/home', id]"></ion-icon>
+
+    CHAT PRIVADO
+  </ion-toolbar>
+<b *ngIf="uid != uid">{{uid}}</b>
+</ion-header>
+<ion-content class="background">
+  <br>
+  <div *ngFor="let cat of room">
+
+
+    <ion-item *ngIf="uid != uid">
+      <b *ngIf="uid != email" style="color: whitesmoke;">{{email}}</b>
+      <ion-label class="ion-text-left">
+        <b style="color: whitesmoke;">{{ cat.chat }}</b>
+        <h2>
+          <b>{{ cat.msg }}</b>
+        </h2>
+      </ion-label>
+    </ion-item>
+
+
+    <!-- mis mensajes -->
+
+  </div>
+  <div *ngFor="let cat of room">
+    <ion-item *ngIf="uid == uid">
+      <b style="color: whitesmoke;">{{email}}</b>
+      <ion-label class="ion-text-right">
+        <b style="color: whitesmoke;">{{cat.users}}</b>
+        <h2>
+          <b>{{ cat.msg }}</b>
+        </h2>
+      </ion-label>
+    </ion-item>
+  </div>
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar class="color">
+    <ion-textarea placeholder="Mensaje" ></ion-textarea>
+    <ion-buttons slot="end" class="color">
+      <ion-button >
+        <ion-icon color="success" name="send"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

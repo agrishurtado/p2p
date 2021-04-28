@@ -1,0 +1,80 @@
+<ion-header>  
+<ion-toolbar class="ion-text-center" color="primary" >
+  <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png" [routerLink]="['/home', id]">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back" [routerLink]="['/home', id]"  ></ion-icon>
+
+        RESERVACIONES
+        
+  </ion-toolbar>
+</ion-header>
+
+
+
+<!-- 
+<ion-content class="background">
+<ion-card align="center" id="conte" >
+   <ion-grid >  
+     <ion-row>
+       <ion-col>
+         <ion-button fill="outline" expand="block" routerLink="/reservaciones-mis-reservaciones">
+          Mis Reservaciones
+         </ion-button>
+       </ion-col>
+       <ion-col>
+         <ion-button fill="outline" expand="block" >
+           Reserv. autorizadas
+         </ion-button>
+       </ion-col>
+     </ion-row>
+   </ion-grid>   
+  </ion-card>
+
+  <ion-card align="center" id="d">
+    <ion-item class="items"  color="success">
+      <ion-label>
+        Areas
+      </ion-label>
+    </ion-item> 
+        <ion-input value="Costo" disabled></ion-input>
+    <ion-input value="Dia Disponible" disabled></ion-input>
+    <ion-input value="Horario" disabled></ion-input>
+    <ion-icon id="calendar" name="calendar-outline"></ion-icon>  
+    <ion-button fill="outline" expand="block">Reservar</ion-button>  
+  </ion-card>
+
+
+ -->
+
+
+  
+<ion-content padding class="background"  [fullscreen]="true" align="center">
+  <ion-card id="conte" color="black"> 
+  
+    <ion-button  name="acceso"
+    class="bordo"
+    size="medium"
+    expand="block"
+    [routerLink]="['/reservaciones-mis-reservaciones']">                   
+    <div align="center">
+     <img src="\assets\icon\anadir-contacto.png">
+     <br>
+     <ion-label class="color" for="">Mis Reservaciones</ion-label>
+    </div>
+    </ion-button>   
+    <br>
+    <ion-button  name="acceso"
+    class="bord"
+    size="medium"
+    expand="block"
+    [routerLink]="['/reservar']">                   
+    <div align="center">
+     <img src="\assets\icon\adjuntar-archivo.png">
+     <br>
+     <ion-label class="color" for="">Reservar</ion-label>
+    </div>
+    </ion-button>
+  </ion-card>
+  
+  
+
+</ion-content>

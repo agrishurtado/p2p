@@ -1,0 +1,66 @@
+<ion-header>  
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"[routerLink]="['/home', ids]">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"[routerLink]="['/home', ids]"></ion-icon>
+
+        MARKET
+        
+  </ion-toolbar>
+</ion-header>
+<ion-content  class="background">
+  <br>
+  <div id="conte" align="center">
+    <br>
+    <ion-button fill="outline" id="conteButton" expand="block" id="r" routerLink="/clasificados-agregar-anuncio" padding expand="block">AGREGAR CLASIFICADO</ion-button>
+    <br> 
+    <ion-item-sliding *ngFor="let clasificado of clasificados">
+      <ion-card  style="background: white;">
+        <img src="{{clasificado.image}}"/>
+        <ion-card-header>          
+          <ion-card-title color="black">{{clasificado.producto}}</ion-card-title>
+          <ion-card-subtitle>{{clasificado.precio | currency }}</ion-card-subtitle>
+          <ion-card-subtitle><strong>Contacto:</strong> {{clasificado.telefono}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          {{clasificado.descripcion}}
+        </ion-card-content>
+        <ion-button class="botonsillo" color="danger" (click)="deletePost(clasificado.id)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-card>
+    </ion-item-sliding>        
+  </div>  
+
+
+
+
+  <ion-card style="color: black;">
+    <ion-list style="color: black;">
+      <ion-item-sliding *ngFor="let post of market">
+        <ion-icon slot="end" name="trash" size="large" color="danger"(click)="onRemove(post.id)"></ion-icon>      
+        <div class="ion-text-center">
+          <img class="imga" src="{{ post.image }}">
+        </div>
+    <ion-item class="ion-text-center" style="color: black;">
+            <ion-label class="color">
+            <ion-card-title>Nombre Del producto:<ion-card-title style="color: rgb(0, 247, 255);">{{ post.name }}</ion-card-title></ion-card-title>
+            <ion-card-subtitle>Telefono:<ion-card-subtitle style="color: rgb(0, 247, 255);">{{ post.tel }}</ion-card-subtitle></ion-card-subtitle>
+            <ion-card-subtitle>Precio:<ion-card-subtitle style="color: rgb(0, 247, 255);">{{ post.price }}</ion-card-subtitle> </ion-card-subtitle>
+            <ion-card-subtitle>Descripción:<ion-card-subtitle class="ion-text-wrap" style="color: rgb(0, 247, 255);">{{ post.feedbak }}</ion-card-subtitle></ion-card-subtitle>
+            </ion-label>
+            
+          </ion-item>
+          <br>
+      </ion-item-sliding>
+    </ion-list>
+  </ion-card>
+
+
+
+
+
+
+
+
+
+</ion-content>

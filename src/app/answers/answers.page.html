@@ -1,0 +1,363 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-icon size="large" slot="start" name="arrow-back"routerLink="/encuestastitulos"></ion-icon>
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"[routerLink]="['/home', ids]">
+    <ion-title class="ion-text-center">
+      RESULTADO DE LA ENCUESTA
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background">
+  <ion-card id="conte">
+    <ion-card class="items" color="success">
+      <ion-label >
+        <h2 class="ion-text-center" style="color: black;"><b>{{post.titulo}}</b></h2>
+      </ion-label>
+    </ion-card>
+
+    <div id="uno">
+      <ion-card class="linea">
+        <ion-item >
+          <ion-label class="ion-text-center: ion-text-wrap" style="color: rgb(175, 255, 212);">{{post.pregunta}} </ion-label>
+        </ion-item>
+         
+          <ion-row >
+            <ion-col size="12" align="center">
+              <ion-label style="color: whitesmoke;"><h3 style="color: turquoise;">{{post.respuesta}}</h3>
+              Total:<h3 style="color: whitesmoke;"> {{ allA }} </h3></ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="1">
+              <ion-label color="primary">0%</ion-label>
+            </ion-col>
+            <ion-col size="7">
+              <ion-progress-bar  color="danger"  value="{{ mol }}" buffer="1.0"></ion-progress-bar>
+            </ion-col>
+            <ion-col size="2">
+              <ion-label color="primary">100%</ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+          </ion-row>
+        
+        <br>
+      
+          <ion-row>
+            <ion-col size="12" align="center">
+              <ion-label style="color: whitesmoke;"><h3 style="color: turquoise;">{{post.respuestab}}</h3> 
+                Total:<h3 style="color: whitesmoke;"> {{ allB }} </h3>
+              </ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="1">
+              <ion-label color="primary">0%</ion-label>
+            </ion-col>
+            <ion-col size="7">
+              <ion-progress-bar color="secondary" value="{{ molB }}"></ion-progress-bar>
+            </ion-col>
+            <ion-col size="2">
+              <ion-label color="primary">100%</ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+          </ion-row>
+      
+        <br>
+      
+          <ion-row *ngIf="post.respuestac !== 'N/A'">
+            <ion-col size="12" align="center">
+              <ion-label style="color: whitesmoke;"><h3 style="color: turquoise;">{{post.respuestac}} </h3> 
+                Total:<h3 style="color: whitesmoke;"> {{ allC }} </h3></ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="1">
+              <ion-label color="primary">0%</ion-label>
+            </ion-col>
+            <ion-col size="7">
+              <ion-progress-bar color="secondary" value="{{ molC }}"></ion-progress-bar>
+            </ion-col>
+            <ion-col size="2">
+              <ion-label color="primary">100%</ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+          </ion-row>
+        
+      </ion-card>
+    </div>
+
+
+    <!-- 2 -->
+    <div id="uno">
+      <ion-card class="linea">
+        <ion-item>
+          <ion-label class="ion-text-center: ion-text-wrap" style="color:  rgb(175, 255, 212);">{{post.pregunta2}} </ion-label>
+        </ion-item>
+         
+          <ion-row>
+            <ion-col size="12" align="center">
+              <ion-label style="color: whitesmoke;"><h3 style="color: turquoise;">{{post.respuesta2}} </h3> 
+                Total:<h3 style="color: whitesmoke;"> {{ allD }} </h3></ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="1">
+              <ion-label color="primary">0%</ion-label>
+            </ion-col>
+            <ion-col size="7">
+              <ion-progress-bar color="danger" value="{{ molD }}" buffer="1.0"></ion-progress-bar>
+            </ion-col>
+            <ion-col size="2">
+              <ion-label color="primary">100%</ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+          </ion-row>
+        
+        <br>
+      
+          <ion-row>
+            <ion-col size="12" align="center">
+              <ion-label style="color: whitesmoke;"><h3 style="color: turquoise;">{{post.respuestab2}} </h3> 
+                Total:<h3 style="color: whitesmoke;"> {{ allE }} </h3></ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="1">
+              <ion-label color="primary">0%</ion-label>
+            </ion-col>
+            <ion-col size="7">
+              <ion-progress-bar color="secondary" value="{{ molE }}"></ion-progress-bar>
+            </ion-col>
+            <ion-col size="2">
+              <ion-label color="primary">100%</ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+          </ion-row>
+      
+        <br>
+      
+          <ion-row *ngIf="post.respuestac2 !== 'N/A'">
+            <ion-col size="12" align="center">
+              <ion-label style="color: whitesmoke;"><h3 style="color: turquoise;">{{post.respuestac2}} </h3> 
+                Total:<h3 style="color: whitesmoke;"> {{ allF }} </h3></ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="1">
+              <ion-label color="primary">0%</ion-label>
+            </ion-col>
+            <ion-col size="7">
+              <ion-progress-bar color="secondary" value="{{ molF }}"></ion-progress-bar>
+            </ion-col>
+            <ion-col size="2">
+              <ion-label color="primary">100%</ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+          </ion-row>
+        
+      </ion-card>
+    </div>
+
+    <!-- 3 -->
+
+    <div id="uno">
+      <ion-card *ngIf="post.pregunta5 !== 'N/A'" class="linea">
+        <ion-item>
+          <ion-label class="ion-text-center: ion-text-wrap" style="color:  rgb(175, 255, 212);">{{post.pregunta3}} </ion-label>
+        </ion-item>
+         
+          <ion-row>
+            <ion-col size="12" align="center">
+              <ion-label style="color: whitesmoke;"><h3 style="color: turquoise;">{{post.respuesta3}} </h3> 
+                Total:<h3 style="color: whitesmoke;"> {{ allG }} </h3></ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="1">
+              <ion-label color="primary">0%</ion-label>
+            </ion-col>
+            <ion-col size="7">
+              <ion-progress-bar color="danger" value="{{ molG }}" buffer="1.0"></ion-progress-bar>
+            </ion-col>
+            <ion-col size="2">
+              <ion-label color="primary">100%</ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+          </ion-row>
+        
+        <br>
+      
+          <ion-row>
+            <ion-col size="12" align="center">
+              <ion-label style="color: whitesmoke;"><h3 style="color: turquoise;">{{post.respuestab3}} </h3> 
+                Total:<h3 style="color: whitesmoke;"> {{ allH }} </h3></ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="1">
+              <ion-label color="primary">0%</ion-label>
+            </ion-col>
+            <ion-col size="7">
+              <ion-progress-bar color="secondary" value="{{ molH }}"></ion-progress-bar>
+            </ion-col>
+            <ion-col size="2">
+              <ion-label color="primary">100%</ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+          </ion-row>
+      
+        <br>
+      
+          <ion-row *ngIf="post.respuestac3 !== 'N/A'">
+            <ion-col size="12" align="center">
+              <ion-label style="color: whitesmoke;"><h3 style="color: turquoise;">{{post.respuestac3}} </h3> 
+                Total:<h3 style="color: whitesmoke;"> {{ allI }} </h3></ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="1">
+              <ion-label color="primary">0%</ion-label>
+            </ion-col>
+            <ion-col size="7">
+              <ion-progress-bar color="secondary" value="{{ molI }}"></ion-progress-bar>
+            </ion-col>
+            <ion-col size="2">
+              <ion-label color="primary">100%</ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+          </ion-row>
+        
+      </ion-card>
+    </div>
+    <!-- 4 -->
+
+    <div id="uno">
+      <ion-card *ngIf="post.pregunta5 !== 'N/A'" class="linea">
+        <ion-item>
+          <ion-label class="ion-text-center: ion-text-wrap" style="color:  rgb(175, 255, 212);">{{post.pregunta4}} </ion-label>
+        </ion-item>
+         
+          <ion-row>
+            <ion-col size="12" align="center">
+              <ion-label style="color: whitesmoke;"><h3 style="color: turquoise;">{{post.respuesta4}} </h3> 
+                Total:<h3 style="color: whitesmoke;"> {{ allJ }} </h3></ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="1">
+              <ion-label color="primary">0%</ion-label>
+            </ion-col>
+            <ion-col size="7">
+              <ion-progress-bar color="danger" value="{{ molJ }}" buffer="1.0"></ion-progress-bar>
+            </ion-col>
+            <ion-col size="2">
+              <ion-label color="primary">100%</ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+          </ion-row>
+        
+        <br>
+      
+          <ion-row>
+            <ion-col size="12" align="center">
+              <ion-label style="color: whitesmoke;"><h3 style="color: turquoise;">{{post.respuestab4}} </h3> 
+                Total:<h3 style="color: whitesmoke;"> {{ allK }} </h3></ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="1">
+              <ion-label color="primary">0%</ion-label>
+            </ion-col>
+            <ion-col size="7">
+              <ion-progress-bar color="secondary" value="{{ molK }}"></ion-progress-bar>
+            </ion-col>
+            <ion-col size="2">
+              <ion-label color="primary">100%</ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+          </ion-row>
+      
+        <br>
+      
+          <ion-row *ngIf="post.respuestac4 !== 'N/A'">
+            <ion-col size="12" align="center">
+              <ion-label style="color: whitesmoke;"><h3 style="color: turquoise;">{{post.respuestac4}} </h3> 
+                Total:<h3 style="color: whitesmoke;"> {{ allL }} </h3></ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="1">
+              <ion-label color="primary">0%</ion-label>
+            </ion-col>
+            <ion-col size="7">
+              <ion-progress-bar color="secondary" value="{{ molL }}"></ion-progress-bar>
+            </ion-col>
+            <ion-col size="2">
+              <ion-label color="primary">100%</ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+          </ion-row>
+        
+      </ion-card>
+    </div>
+
+    <!-- 5 -->
+    <div id="uno">
+      <ion-card *ngIf="post.pregunta5 !== 'N/A'" class="linea">
+        <ion-item>
+          <ion-label class="ion-text-center: ion-text-wrap" style="color:  rgb(175, 255, 212);">{{post.pregunta5}} </ion-label>
+        </ion-item>
+         
+          <ion-row>
+            <ion-col size="12" align="center">
+              <ion-label style="color: whitesmoke;"><h3 style="color: turquoise;">{{post.respuesta5}} </h3> 
+                Total:<h3 style="color: whitesmoke;"> {{ allM }} </h3></ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="1">
+              <ion-label color="primary">0%</ion-label>
+            </ion-col>
+            <ion-col size="7">
+              <ion-progress-bar color="danger" value="{{ molM }}" buffer="1.0"></ion-progress-bar>
+            </ion-col>
+            <ion-col size="2">
+              <ion-label color="primary">100%</ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+          </ion-row>
+        
+        <br>
+      
+          <ion-row>
+            <ion-col size="12" align="center">
+              <ion-label style="color: whitesmoke;"><h3 style="color: turquoise;">{{post.respuestab5}} </h3> 
+                Total:<h3 style="color: whitesmoke;"> {{ allN }} </h3></ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="1">
+              <ion-label color="primary">0%</ion-label>
+            </ion-col>
+            <ion-col size="7">
+              <ion-progress-bar color="secondary" value="{{ molN }}"></ion-progress-bar>
+            </ion-col>
+            <ion-col size="2">
+              <ion-label color="primary">100%</ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+          </ion-row>
+      
+        <br>
+      
+          <ion-row *ngIf="post.respuestac5 !== 'N/A'">
+            <ion-col size="12" align="center">
+              <ion-label style="color: whitesmoke;"><h3 style="color: turquoise;">{{post.respuestac5}} </h3> 
+                Total:<h3 style="color: whitesmoke;"> {{ allO }} </h3></ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+            <ion-col size="1">
+              <ion-label color="primary">0%</ion-label>
+            </ion-col>
+            <ion-col size="7">
+              <ion-progress-bar color="secondary" value="{{ molO }}"></ion-progress-bar>
+            </ion-col>
+            <ion-col size="2">
+              <ion-label color="primary">100%</ion-label>
+            </ion-col>
+            <ion-col size="1"></ion-col>
+          </ion-row>
+        
+      </ion-card>
+    </div>
+  </ion-card>
+
+
+</ion-content>

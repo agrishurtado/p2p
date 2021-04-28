@@ -1,0 +1,158 @@
+[33mcommit 9eeb7d8a843114c97bdda4dfe91bf842bce29b8e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31mresidenciales/master[m[33m)[m
+Author: Mane208 <manuelon.208@gmail.com>
+Date:   Fri Jul 24 15:56:07 2020 -0500
+
+    cambios de avatar en accesos-registrar-visita,accesos,balance, se agrego imagen redonda de logo
+
+[33mcommit e8234ebc636c247d9a891493f67ecdf732f94b78[m
+Author: agrishurtado <agrishurtado@gmail.com>
+Date:   Fri Jul 24 14:05:53 2020 -0500
+
+    cambio de color en variable para los dos success
+
+[33mcommit 7ca915a32e77bdf7f4734fc2eea9499af63cc79e[m
+Author: agrishurtado <agrishurtado@gmail.com>
+Date:   Fri Jul 24 13:56:11 2020 -0500
+
+    creacion de balance y cambio en color succes intercalacion de colores
+
+[33mcommit f8c4e185d759b7027be354591a3d1575142ac7f8[m
+Author: agrishurtado <agrishurtdo@gmail.com>
+Date:   Thu Jul 23 19:25:23 2020 -0500
+
+    cambios a nuevas pantallas y background de resevaciones autorizadas
+
+[33mcommit e51fd39ed83bd09fbf94974356d616a6d238a119[m
+Author: GatsuLARM <luis.a.r.m.326@gmail.com>
+Date:   Thu Jul 23 18:57:28 2020 -0500
+
+    correcciones encuestas
+
+[33mcommit 1603cd1a07dc8320faf029021351ed7ed0b8b672[m
+Merge: 2b5205d 904f326
+Author: GatsuLARM <luis.a.r.m.326@gmail.com>
+Date:   Thu Jul 23 18:51:53 2020 -0500
+
+    cambio de vista configuraciones y toolbar encuestas
+
+[33mcommit 2b5205d0c27445a61623e8cc489207a6c110107d[m
+Author: GatsuLARM <luis.a.r.m.326@gmail.com>
+Date:   Thu Jul 23 18:49:24 2020 -0500
+
+    cambio de vista configuraciones y toolbar encuestas
+
+[33mcommit 904f3268505db5887b02a91ba9f051d7baecda7f[m
+Author: agrishurtado <agrishurtdo@gmail.com>
+Date:   Thu Jul 23 18:47:28 2020 -0500
+
+    se crea ventana de seleccion de encuestas
+
+[33mcommit fceb58df084ea113c55b8674e3f4abfb1fe0e41a[m
+Author: agrishurtado <agrishurtdo@gmail.com>
+Date:   Thu Jul 23 18:35:38 2020 -0500
+
+    cambio de botones en comunicados
+
+[33mcommit dd5f9b73927b8b2d19bdb580815eb50c5cc8d820[m
+Author: agrishurtado <agrishurtdo@gmail.com>
+Date:   Thu Jul 23 18:21:47 2020 -0500
+
+    creacion de nuevas pantallas de reservaciones y modificacion de las viejas
+
+[33mcommit 5042707c3a6c312b1814130b76b481523d7e0ce6[m
+Merge: 2b3e952 b482e72
+Author: GatsuLARM <luis.a.r.m.326@gmail.com>
+Date:   Thu Jul 23 17:17:53 2020 -0500
+
+    cambio de vista de accesos
+
+[33mcommit 2b3e952a58ed9a91fe60251f2584e3f8d5f4376e[m
+Author: GatsuLARM <luis.a.r.m.326@gmail.com>
+Date:   Thu Jul 23 17:13:45 2020 -0500
+
+    cambio de vista de accesos
+
+[33mcommit b482e725368b398faec60352b9d22a1f9f954bef[m
+Author: agrishurtado <agrishurtdo@gmail.com>
+Date:   Thu Jul 23 17:03:16 2020 -0500
+
+    cambio toolbar registrar visitas tamaño
+
+[33mcommit 714da9453605ce6cbe7f3165e09cc89634898fd0[m
+Merge: c49b828 d0c2e78
+Author: agrishurtado <agrishurtdo@gmail.com>
+Date:   Thu Jul 23 16:55:29 2020 -0500
+
+    Merge branch 'master' of https://github.com/agrishurtado/residenciales
+
+[33mcommit c49b8286f10b64079f479518f689f5720d941f58[m
+Author: agrishurtado <agrishurtdo@gmail.com>
+Date:   Thu Jul 23 16:54:45 2020 -0500
+
+    cambios en nuevas pantallas de accesos y diferentes
+
+[33mcommit d0c2e787052b24a94fdd38b52c3cd1e333dc9f52[m
+Author: Mane208 <manuelon.208@gmail.com>
+Date:   Thu Jul 23 15:55:39 2020 -0500
+
+    TODOS LOS TITULOS DEL TOOLBAR A MAYUSCULA
+
+[33mcommit 390ec6fe719424b287fba72fe763136d10bb1467[m
+Author: Mane208 <manuelon.208@gmail.com>
+Date:   Thu Jul 23 15:43:47 2020 -0500
+
+    cambios en el css de todas las ventanas para el toolbar
+
+[33mcommit 25e395acc02ea3a7bb8d68c31dc1a516e440b43b[m
+Author: agrishurtado <agrishurtdo@gmail.com>
+Date:   Thu Jul 23 15:12:50 2020 -0500
+
+    cambio toolbars letras color y iconos return
+
+[33mcommit 34d33036cd853c20a38eacb4fcab56696ab1633e[m
+Author: agrishurtado <agrishurtado@gmail.com>
+Date:   Wed Jul 22 21:44:57 2020 -0500
+
+    se cambian color fbackground de  todo configuraciones y submenus
+
+[33mcommit 0338ff7d05d91a4b9f0ebd6ab00d5c9bbbad4c14[m
+Author: agrishurtado <agrishurtado@gmail.com>
+Date:   Wed Jul 22 20:41:55 2020 -0500
+
+    se cambiaron pantallas de configuracion y submenus
+
+[33mcommit d23f851c07621caa43bb0ee959c5d73061fd76a6[m
+Author: Adriana Ledezma <adrianldzma@gmail.com>
+Date:   Tue Jul 21 23:56:51 2020 -0500
+
+    ;)
+
+[33mcommit d13e051fde344168d4ff8b91677bce9e6571dd64[m
+Author: Adriana Ledezma <adrianldzma@gmail.com>
+Date:   Tue Jul 21 23:54:27 2020 -0500
+
+    Accesos, Comunicados y Market
+
+[33mcommit b47b81dcc6a198898cc627e30f7a650f09f389c8[m
+Author: agrishurtado <agrishurtado@gmail.com>
+Date:   Tue Jul 21 12:32:02 2020 -0500
+
+    comiendo chilaquiles
+
+[33mcommit fd174b276e01033fdead5473a8d9808cc4a9f426[m
+Author: Luis Alberto Rodriguez Montes <luis.a.r.m.326@gmail.com>
+Date:   Tue Jul 21 11:48:49 2020 -0500
+
+    Tu dios Luis
+
+[33mcommit e7d9775c055396576e7641afa81e5a7bcae95d0a[m
+Author: unknown <manuelon.208@gmail.com>
+Date:   Mon Jul 20 23:02:53 2020 -0500
+
+    Cambio en login por mane
+
+[33mcommit 17d7b1efa74da901c0eb5648d2076d7b8a5a900f[m
+Author: agrishurtado <agrishurtado>
+Date:   Mon Jul 20 20:52:13 2020 -0500
+
+    first commit

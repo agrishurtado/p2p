@@ -1,0 +1,75 @@
+ion-content.background{
+    --ion-background-color: #000000 ;
+  }
+  
+  ion-label.color{
+    
+    color: whitesmoke;
+  }
+  
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    margin:1rem auto;
+    max-width: 600px;
+  }  
+  
+  .subtitulo{
+    color: black;
+  }
+
+  .titulo {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+
+.contenido {
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+  
+  ion-toolbar{
+      font-size: 25px;
+  }
+  .avatar{
+      width: 10%;
+  }
+  
+  .p{
+      color: whitesmoke;
+      
+  }
+  
+  ion-input{
+    --placeholder-color: whitesmoke;
+    --placeholder-font-weight: 100%;
+    color: whitesmoke;
+  }
+  
+  ion-button.color{
+      color: whitesmoke;
+  }
+  
+  ion-label.titulo{
+    font-size: 25px;
+    color: whitesmoke;
+  
+  }
+  
+  #icon2{
+    width: 50px;
+    width: 40%;
+  }
+  input#file-input{
+  
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  #añadir{
+    padding: 10px;   
+    width: 30%; 
+    border: 5px solid skyblue;
+    background-color: rgba(0, 0, 0, 0);
+  }

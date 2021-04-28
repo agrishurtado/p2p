@@ -1,0 +1,141 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary">
+    <img class="avatar" slot="end" src="\assets\icons\imagenlogo-Avatar.png" routerLink="/home">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back" routerLink="/encuestas"></ion-icon>
+
+    CREAR ENCUESTA
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+
+  <ion-fab  vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="danger" (click)="showOptions()">
+      <ion-icon name="save-outline" color="success">
+      </ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <br>
+
+  <ion-item class="items" color="success" align="center">
+   <ion-input style="color: rgb(0, 0, 0);" required [(ngModel)]="post.titulo" class="input" type="text" placeholder="Título de la encuesta" ></ion-input>
+  </ion-item> 
+  <br>
+
+  <ion-card>
+    <ion-item >
+      <ion-label position="floating" style="color: whitesmoke;">Fecha de Inicio</ion-label>
+      <ion-datetime style="color: whitesmoke;" displayFormat="DD/MMMM/YYYY" type="text" required [(ngModel)]="post.fechainicio" max="2030"
+       ></ion-datetime>
+    </ion-item>
+   </ion-card>
+  
+   <ion-card>
+    <ion-item style="color: gray;">
+      <ion-label position="floating" style="color: whitesmoke;">Fecha de Termino</ion-label>
+      <ion-datetime style="color: whitesmoke;" displayFormat="DD/MMMM/YYYY" type="text" required [(ngModel)]="post.fechatermino" max="2030"
+       ></ion-datetime>
+    </ion-item>
+   </ion-card>
+  
+  <ion-card >
+    <ion-item>
+      <ion-textarea style="color: whitesmoke;"  placeholder="Mensaje" [(ngModel)]="post.mensaje" ></ion-textarea>
+  </ion-item> 
+  </ion-card>
+  
+  
+  <ion-card>
+    <ion-item>
+    <ion-label style="color: whitesmoke;" position="floating">Pregunta # 1</ion-label>
+    <ion-input required [(ngModel)]="post.pregunta"></ion-input>
+  </ion-item> 
+  </ion-card>
+
+
+  <ion-card>
+    <ion-label style="color: whitesmoke;" >Respuesta(s)</ion-label>
+    
+    <ion-input required style="color: rgb(0, 174, 255);" placeholder="Respuesta 1" [(ngModel)]="post.respuesta"></ion-input>
+    <ion-input required style="color: rgb(0, 174, 255);" placeholder="Respuesta 2" [(ngModel)]="post.respuestab"></ion-input>
+    <ion-input required style="color: rgb(0, 174, 255);" placeholder="Respuesta 3" [(ngModel)]="post.respuestac"></ion-input>
+  
+  </ion-card>
+
+  <ion-card >
+    <ion-item >
+    <ion-label style="color: whitesmoke;" position="floating">Pregunta # 2</ion-label>
+    <ion-input  required [(ngModel)]="post.pregunta2"></ion-input>
+  </ion-item> 
+  </ion-card>
+
+
+  <ion-card>
+    <ion-label style="color: whitesmoke;" >Respuesta(s)</ion-label>
+    
+    <ion-input required style="color: rgb(0, 174, 255);" placeholder="Respuesta 1" [(ngModel)]="post.respuesta2"></ion-input>
+    <ion-input required style="color: rgb(0, 174, 255);" placeholder="Respuesta 2" [(ngModel)]="post.respuestab2"></ion-input>
+    <ion-input required style="color: rgb(0, 174, 255);" placeholder="Respuesta 3" [(ngModel)]="post.respuestac2"></ion-input>
+  
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+    <ion-label style="color: whitesmoke;" position="floating">Pregunta # 3</ion-label>
+    <ion-input required [(ngModel)]="post.pregunta3"></ion-input>
+  </ion-item> 
+  </ion-card>
+
+
+  <ion-card>
+    <ion-label style="color: whitesmoke;" >Respuesta(s)</ion-label>
+    
+    <ion-input required style="color: rgb(0, 174, 255);" placeholder="Respuesta 1" [(ngModel)]="post.respuesta3"></ion-input>
+    <ion-input required style="color: rgb(0, 174, 255);" placeholder="Respuesta 2" [(ngModel)]="post.respuestab3"></ion-input>
+    <ion-input required style="color: rgb(0, 174, 255);" placeholder="Respuesta 3" [(ngModel)]="post.respuestac3"></ion-input>
+  
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+    <ion-label style="color: whitesmoke;" position="floating">Pregunta # 4</ion-label>
+    <ion-input required [(ngModel)]="post.pregunta4"></ion-input>
+  </ion-item> 
+  </ion-card>
+
+
+  <ion-card>
+    <ion-label style="color: whitesmoke;" >Respuesta(s)</ion-label>
+    
+    <ion-input required style="color: rgb(0, 174, 255);" placeholder="Respuesta 1" [(ngModel)]="post.respuesta4"></ion-input>
+    <ion-input required style="color: rgb(0, 174, 255);" placeholder="Respuesta 2" [(ngModel)]="post.respuestab4"></ion-input>
+    <ion-input required style="color: rgb(0, 174, 255);" placeholder="Respuesta 3" [(ngModel)]="post.respuestac4"></ion-input>
+  
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+    <ion-label style="color: whitesmoke;" position="floating">Pregunta # 5</ion-label>
+    <ion-input required [(ngModel)]="post.pregunta5"></ion-input>
+  </ion-item> 
+  </ion-card>
+
+
+  <ion-card>
+    <ion-label style="color: whitesmoke;" >Respuesta(s)</ion-label>
+    
+    <ion-input required style="color: rgb(0, 174, 255);" placeholder="Respuesta 1" [(ngModel)]="post.respuesta5"></ion-input>
+    <ion-input required style="color: rgb(0, 174, 255);" placeholder="Respuesta 2" [(ngModel)]="post.respuestab5"></ion-input>
+    <ion-input required style="color: rgb(0, 174, 255);" placeholder="Respuesta 3" [(ngModel)]="post.respuestac5"></ion-input>
+  
+  </ion-card>
+
+ 
+
+  <!-- <ion-button color="success" fill="outline" (click)="createPost(post)">registrar</ion-button>
+  
+    <ion-button class="but" color="primary" fill="outline" routerLink="/encuestastitulos" >Terminar encuesta</ion-button> -->
+
+  
+
+</ion-content>

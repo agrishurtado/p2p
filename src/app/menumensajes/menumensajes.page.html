@@ -1,0 +1,42 @@
+<ion-header>  
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"[routerLink]="['/home',id]">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"[routerLink]="['/home',id]"></ion-icon>
+  
+          TIPOS DE MENSAJES
+    </ion-toolbar>
+  
+  </ion-header>
+
+
+<ion-content padding class="background"  [fullscreen]="true" align="center">
+  <ion-card id="conte" color="black"> 
+  
+    <ion-button  name="acceso"
+                 class="bord"
+                 size="medium"
+                 expand="block"
+                 [routerLink]="['/mensajes-privados']">                   
+    <div align="center">
+     <img src="\assets\icon\anadir-contacto.png">
+     <br>
+     <ion-label class="color" for="">Privados</ion-label>
+    </div>
+    </ion-button>
+    <br>
+    <ion-button  name="acceso"
+    class="bordo"
+    size="medium"
+    expand="block"
+    routerLink="/mensajes-publicos">                   
+    <div align="center">
+     <img src="\assets\icon\favoritos.png">
+     <br>
+     <ion-label class="color" for="">Públicos </ion-label>
+    </div>
+    </ion-button>
+    
+    
+  </ion-card>
+  </ion-content>
+  

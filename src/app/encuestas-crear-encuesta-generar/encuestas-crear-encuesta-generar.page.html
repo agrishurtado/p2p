@@ -1,0 +1,64 @@
+<ion-header>  
+ <ion-toolbar color="primary" routerLink="/encuestas-crear-encuesta">
+    <ion-row >
+      <ion-col size="1"> 
+        <ion-icon class="return" name="arrow-back"  ></ion-icon>  </ion-col>
+
+      <ion-col size="9">
+      <p align="center">
+        CREAR ENCUESTA
+      </p>
+      </ion-col>
+      <ion-col size="2" >
+
+        <img src="\assets\icons\imagenlogo-Avatar.png">
+
+      </ion-col>          
+    </ion-row> 
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="background">
+  <ion-card id="conte">
+    <ion-card id="conte">
+      <br>
+      
+        <ion-item class="items"  color="success">
+          <ion-label class="subtitulo">
+            Titulo de la encuesta
+          </ion-label>
+        </ion-item>  
+          
+      <div id="uno">
+        <ion-item>
+          <ion-label class="color" position="floating">Mensaje</ion-label>
+          <ion-input placeholder="Mensaje" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label class="color" position="floating">Fecha Inicio</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label class="color" position="floating">Fecha deTermino</ion-label>
+          <ion-input placeholder="Fecha" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label class="color" position="floating">Pregunta</ion-label>
+          <ion-input placeholder="respuesta" ></ion-input>
+          
+        </ion-item>
+        <ion-item>
+          <ion-label class="color" position="floating">Numero de Participantes</ion-label>
+          <ion-input placeholder="numero"></ion-input>
+        </ion-item>
+  
+        
+      </div>
+  <br>
+  
+      <!-- <ion-item>
+        <ion-button routerLink="/encuestas-crear-encuesta-generar" padding expand="block">Publicar </ion-button>
+      </ion-item>  -->
+    </ion-card>
+  </ion-card>
+</ion-content>

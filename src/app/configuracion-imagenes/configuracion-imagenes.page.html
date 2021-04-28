@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"[routerLink]="['/home', id]">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"routerLink="/configuracion"></ion-icon>
+
+        IMAGENES
+        
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content id="d" padding class="background">
+  <br>
+  <div id="conte">
+<ion-grid>
+  <ion-row >
+    <ion-col size="1"> </ion-col>
+    <ion-col align="center" size="10" >
+      <div id="imgcontent" *ngFor="let post of logo">
+        <img src="{{ post.image }}" (click)="deletePost(post.id)">
+        <h3 id="text">Imagen de Logo</h3>
+    </div>
+    </ion-col>   
+    <ion-col size="1"> </ion-col> 
+  </ion-row>
+
+  <ion-row >
+    <ion-col size="1">  </ion-col>
+    <ion-col align="center" size="10">
+
+     <ion-button align="center" id="añadirs" ><input (change)="loadImageFromDevice($event)" type="file"  id="file-input" accept="image/png, image/jpeg" style="font-size: x-small;">
+          <ion-icon size="large" class="ted" name="image" color="success" ></ion-icon>
+        </ion-button>
+
+        
+        <ion-button expand="block"
+                    class="text"
+                    (click)="createPost(post)">
+              SUBIR</ion-button>
+    </ion-col>    
+    <ion-col size="1">
+       
+            </ion-col>      
+  </ion-row>
+  <!-- <ion-row >
+    <ion-col size="1">  </ion-col>
+    <ion-col align="center" size="10">
+      <div id="imgcontent">
+        <img src="../../assets/icon/foto.png" id="imagen"/>
+        <h3 id="text">Imagen de Fondo</h3>
+      </div>
+    </ion-col>    
+    <ion-col size="1"> </ion-col>      
+  </ion-row> -->
+  <!-- <ion-row >
+    <ion-col size="1">  </ion-col>
+    <ion-col align="center" size="10">
+      <button id="añadir"><img src="../../assets/icon/fragmento-de-una-pelicula.png" id="icon2"/></button>
+    </ion-col>    
+    <ion-col size="1"> </ion-col>      
+  </ion-row> -->
+ 
+</ion-grid>
+</div>
+
+
+<!-- 
+<div id="imgcontent" *ngFor="let post of logo">
+  <img src="{{ post.image }}">
+</div> -->
+
+</ion-content>

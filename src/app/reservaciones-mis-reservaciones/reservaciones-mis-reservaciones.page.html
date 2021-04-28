@@ -1,0 +1,70 @@
+<ion-header>  
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"routerLink="/home">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"routerLink="/reservaciones"></ion-icon>
+
+    RESERVACIONES
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content class="background">
+  <ion-card>
+    <ion-list>
+      <ion-item-sliding  *ngFor="let post of registro ">
+        <ion-item class="no-padding" [routerLink]=" ['/reservaciones-mis-reservaciones-editar', post.id ] ">
+          <ion-label class="W" >
+            <ion-input disabled="true" style="color: whitesmoke;" [(ngModel)]="post.domicilio"></ion-input>
+            <ion-input disabled="true" style="color: whitesmoke;" [(ngModel)]="post.nombre"></ion-input>
+            <ion-input disabled="true" style="color: whitesmoke;"[(ngModel)]="post.estatus"></ion-input>
+            <ion-input disabled="true" style="color: whitesmoke;" [(ngModel)]="post.fecha"></ion-input>            
+              <ion-label *ngIf="post.nota" disabled="true" style="color: whitesmoke;">Observaciónes</ion-label>
+              <ion-textarea *ngIf="post.nota" rows="6" cols="20" style="color: whitesmoke;" [(ngModel)]="post.nota"></ion-textarea>  
+           
+          </ion-label>
+        </ion-item>
+        <ion-item-options side="end">
+          <ion-item-option color="danger"  (click)="deletePost(post.id)" > 
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+        <ion-item-options side="start">
+          <ion-item-option color="success" (click)="deletePost(post.id)"  (click)=" createPost(post)">             
+              <ion-icon name="briefcase-outline"></ion-icon>            
+          </ion-item-option>
+        </ion-item-options>
+        </ion-item-sliding>
+     
+    </ion-list>
+  </ion-card> 
+ 
+  <!-- registro de condominos  -->
+  <ion-card>
+    <ion-list>
+      <ion-item-sliding *ngFor="let post of registro2 ">
+        <ion-item class="no-padding"  [routerLink]=" ['/reservaciones-mis-reservaciones-editardos', post.id ] " >
+          <ion-label class="W">
+            <ion-input disabled="true" style="color: whitesmoke;" [(ngModel)]="post.domicilio"></ion-input>
+            <ion-input disabled="true" style="color: whitesmoke;" [(ngModel)]="post.area"></ion-input>
+            <ion-input disabled="true" style="color: whitesmoke;"[(ngModel)]="post.status"></ion-input>
+            <ion-input disabled="true" style="color: whitesmoke;" [(ngModel)]="post.fecha"> </ion-input>
+            <ion-label *ngIf="post.nota" disabled="true" style="color: whitesmoke;">Observaciónes</ion-label>
+            <ion-textarea *ngIf="post.nota" rows="6" cols="20" style="color: whitesmoke;" [(ngModel)]="post.nota"></ion-textarea> 
+          </ion-label>
+        </ion-item>
+        <ion-item-options side="end">
+          <ion-item-option color="danger" (click)="deletePostconcominos(post.id)"> 
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+        <ion-item-options side="start">
+          <ion-item-option color="success"   (click)="deletePostconcominos(post.id)" (click)=" createPost(post)">             
+              <ion-icon name="briefcase-outline"></ion-icon>            
+          </ion-item-option>
+        </ion-item-options>
+        </ion-item-sliding>
+     
+    </ion-list>
+  </ion-card>
+  </ion-content>

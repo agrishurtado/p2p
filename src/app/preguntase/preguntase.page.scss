@@ -1,0 +1,104 @@
+
+#conte{
+    padding-top: 10%;
+    top: 85%; 
+    margin: 0 auto;
+    transform: translateY(30%);
+    //background: red;
+    padding-block-end: 20%;
+    align-items: center;
+  }
+  
+  .pets{
+    color: black;
+  }
+  
+  ion-content.background{
+    --ion-background-color: #16171a;
+  }
+  ion-button{ 
+    
+   padding-top: 0%;
+   text-align: center;
+    //background: rgb(0, 162, 255);
+    color: #fff;
+   //padding-top: 50px;
+   //padding-block-end: 50px;     
+    //border-color: blue;
+  }
+  
+  ion-icon {
+    align-content: right;
+    font-size: 300%;
+    //color: blue;
+  }
+  #list-circle{
+      color: rgba(47, 47, 47, 0.829);
+  }
+  
+  ion-title{
+    
+    font-size: medium;
+  }
+  
+  .items{
+    border-radius: 15px;
+    width: 90%;
+    height: 40px ;
+    left: 5%;
+    right: 5%;
+  }
+  
+  H2{
+    font-size: 13PX;
+  }
+  
+  ion-input{
+    color: whitesmoke;
+  }
+   ion-select{
+    color: whitesmoke;
+   }
+  
+   ion-toolbar{
+  
+    font-size: 25px;
+  }
+  
+  .return{
+    color: whitesmoke;
+    font-size: 25px;
+  }
+  
+  .avatar{
+    width: 10%;
+  }
+  
+  .subtitulo{
+    color: black;
+  }
+  
+  ion-fab-button.tama{
+    height:  25px;
+    width: 25px;
+  }
+  
+  ion-label.color{
+    --ion-background-color: whitesmoke;
+  }
+  
+  ion-content.background{
+    --ion-background-color: #16171a;
+  }
+  ion-icon{
+  color: #55a6f1;
+  }
+  
+  ion-input.input{
+    color: #16171a;
+    font-weight: 900;
+    text-align: center;
+  }
+  .but{
+    display: disabled;
+  }

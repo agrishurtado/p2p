@@ -1,0 +1,172 @@
+#d{
+    height: auto;
+  }
+    
+  #conte{
+    height: auto;
+    padding-top: 20px ;     
+    margin: 0 auto;
+    transform: translateY(5px);
+    padding-block-end: 20px;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #0be9b1;
+  }
+  
+   
+  #conteazul{
+    height: auto;
+    padding-top: 20px ;     
+    margin: 0 auto;
+    transform: translateY(5px);
+    padding-block-end: 20px;
+    width: 90%;
+    border-radius: 5px;
+    border: 1px solid #0b73e9;
+  }
+    
+  #conte1{
+    height: 30%;
+    width: 90%;
+  }
+  
+  #añadir{
+    padding: 10px;   
+    width: 15%; 
+    border: 5px solid skyblue;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  #header{
+    width: 10%;
+    background-color: rgba(0, 0, 0, 0);
+  }
+    
+  
+  
+  
+  #text{
+    color: white;
+    font-weight: bold;
+  }
+  
+  #input{
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+   
+  
+  
+  #titulo{
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    --background: black;
+  }
+  
+  
+  
+  ion-content.background{
+    --ion-background-color: #16171a;
+  }
+  
+  ion-toolbar{
+   
+    font-size: 25px;
+  }
+  
+  .return{
+    color: whitesmoke;
+    font-size: 35px;
+  }
+  
+  ion-label.color{
+    color: whitesmoke;
+  }
+  ion-input{
+    color: whitesmoke;
+  }
+  
+  .avatar{
+    width: 10%;
+  }
+
+
+
+  // saddddddddddddddddddddddddddddddddddddd
+
+  
+  #conte{
+    padding-top: 10%;
+    top: 85%; 
+    margin: 0 auto;
+    // transform: translateY(-80%); 
+    padding-block-end: 20%;
+  }
+  
+  ion-content.background{
+    --ion-background-color: #16171a;
+  }
+  ion-button.text{   
+   
+   //padding-top: 500px;
+   //padding-block-end: 30px;    
+    width: 100%;   
+    height: 150px;
+    //background:whitesmoke;
+   color: whitesmoke;
+   border-radius: 15px;
+  }
+  
+  ion-icon {
+   // align-content: right;
+    font-size: 200%;
+    //color:whitesmoke;
+  
+  }
+  img{
+    width: 80px;
+  }
+  
+  ion-title{
+    
+    font-size: medium;
+  }
+  
+  ion-toolbar{
+  
+    font-size: 25px;
+  }
+  
+  .return{
+    color: whitesmoke;
+    font-size: 25px;
+  }
+
+  ion-label{
+    color: whitesmoke;
+  }
+  .img{
+    font-size: 15px;
+  }
+
+  .avatar{
+    width: 10%;
+  }
+  ion-button.bord{
+    width: 100%;   
+    height: 70px;
+   text-overflow: 25px;
+   border-radius: 10px;
+   border: 6px double rgb(0, 183, 255);
+   --background: transparent;
+}
+
+ion-button.bordo{
+  width: 100%;   
+  height: 70px;
+   text-overflow: 25px;
+   border-radius: 10px;
+   border: 6px double rgb(0, 255, 149);
+   --background: transparent;
+}

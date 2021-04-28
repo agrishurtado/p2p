@@ -1,0 +1,100 @@
+#d{
+  height: auto;
+}
+#conte{
+  height: auto;
+  padding-top: 20px ;     
+  margin: 0 auto;
+  transform: translateY(5px);
+  padding-block-end: 20px;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #0be9b1;
+}
+
+ 
+#conteazul{
+  height: auto;
+  padding-top: 20px ;     
+  margin: 0 auto;
+  transform: translateY(5px);
+  padding-block-end: 20px;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #0b73e9;
+} 
+#conte1{
+  height: 30%;
+  width: 90%;
+}
+
+#añadir{
+  padding: 10px;   
+  width: 20%; 
+  border: 5px solid skyblue;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#header{
+  width: 10%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#titulo{
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+#icon{
+  width: 100px;
+  padding-top: 25px;
+}
+
+#text{
+  color: white;
+  font-weight: bold;
+}
+
+#input{
+  border: 1px solid white;
+  border-radius: 5px;
+}
+ 
+#icon2{
+  width: 50px;
+}
+  
+
+
+.return{
+  color: whitesmoke;
+}
+
+ion-input.cool{
+  color: whitesmoke;
+}
+
+ion-content.background{
+  --ion-background-color: #16171a;
+}
+
+ion-toolbar{
+  font-size: 25px;
+}
+
+img{
+  font-size: 35px;
+}
+
+.avatar{
+  width: 10%;
+}
+
+ion-segment-button.color{
+color: success;
+
+}
+ion-label.color{
+  color: whitesmoke;
+}

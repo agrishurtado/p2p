@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"[routerLink]="['/home', id]">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"routerLink="/configuracion"></ion-icon>
+
+        CONFIGURACIÓN
+        
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="background">
+  <div id="d">
+<br>
+  <div id="conte"  align="center">
+
+    <h1 id="text">Datos de tu cuenta banacaria</h1>
+
+    <div id="conte1" align="center">
+      <ion-item >
+        <ion-label class="color" position="floating">Banco</ion-label>
+        <ion-input type="text" [(ngModel)]="post.banco" required ></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label class="color" position="floating">Cuenta</ion-label>
+        <ion-input type="text" [(ngModel)]="post.cuenta" required></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label class="color" position="floating">Clave</ion-label>
+        <ion-input type="text"  [(ngModel)]="post.clave"></ion-input>
+      </ion-item>
+      
+      <ion-item >
+        <ion-label class="color" position="floating">Tarjeta</ion-label>
+        <ion-input type="text"  [(ngModel)]="post.tarjeta" ></ion-input>
+      </ion-item>
+     
+     <ion-item >
+      <ion-label class="color" position="floating">Saldo en cuenta</ion-label>
+      <ion-input type="text"  [(ngModel)]="post.saldocuenta" ></ion-input>
+    </ion-item>
+   <br>
+
+
+ <ion-button (click)="createPostBanco(post)" fill="outline">Agregar</ion-button>
+     
+    </div>    
+  </div>  
+ <br>
+ 
+ <br>
+
+    <div id="conteazul"align="center">
+      <h1 id="text">Concepto de pago</h1>
+      <div id="conte1" align="center">
+        <ion-item >
+          <ion-label class="color" position="floating">Mantenimiento</ion-label>
+          <ion-input type="text"  [(ngModel)]="post.mantenimiento"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label class="color" position="floating">Seguridad</ion-label>
+          <ion-input type="text"  [(ngModel)]="post.seguridad" ></ion-input>
+        </ion-item>
+        <ion-item >
+          <ion-label class="color" position="floating">Luz</ion-label>
+          <ion-input type="text"  [(ngModel)]="post.luz" ></ion-input>
+        </ion-item>
+<br>
+<ion-button (click)="createPostConceptos(post)" fill="outline">Agregar</ion-button>
+
+      </div>    
+    </div>  
+<br>
+<br>
+<br>
+
+    <div id="conte"align="center">
+
+      <h1 id="text">Cuotas</h1>
+  
+      <div id="conte1" align="center">
+  
+        <ion-item >
+          <ion-label class="color" position="floating">Día de Pago</ion-label>
+          <ion-input type="text"  [(ngModel)]="post.diapago" ></ion-input>
+        </ion-item>        
+        
+        <ion-item >
+          <ion-label class="color" position="floating">Cuota Pago Tardio</ion-label>
+          <ion-input type="text"  [(ngModel)]="post.pagotardio" ></ion-input>
+        </ion-item>     
+        
+      <br>
+      <ion-button (click)="createPostCuotas(post)" fill="outline">Agregar</ion-button>
+
+       
+      </div>    
+    </div>  
+   <br>
+
+   <div id="contebutton" align="center">
+    <button align="center" id="añadir" routerLink="/configuracion-config-condomino-dos" ><img src="../../assets/icon/cheuron.png" id="icon2" /></button>
+    <!-- (click)="createPost(post)"  -->
+  </div>
+   <br>
+  
+</div>
+
+</ion-content> 

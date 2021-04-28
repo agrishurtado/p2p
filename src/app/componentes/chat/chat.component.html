@@ -1,0 +1,31 @@
+<ion-header>  
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"routerLink="/home">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"(click)="closeChat()"></ion-icon>
+  65465465
+    </ion-toolbar>
+  
+  </ion-header>
+  <ion-content >
+    <br>
+    <div >
+      <ion-card *ngFor="let post of mensajes">
+        <ion-card-content>
+          <h2 >{{mensajes}}</h2>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    
+    </ion-content>
+    
+
+    <ion-footer>
+      <ion-toolbar class="color" >
+        <ion-textarea  placeholder="Mensaje" [(ngModel)]="msg" ></ion-textarea>
+        <ion-buttons slot="end" class="color">
+          <ion-button (click)="sendMessage()">
+            <ion-icon color="success" name="send" ></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-footer>

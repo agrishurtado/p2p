@@ -1,0 +1,85 @@
+<ion-header>  
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png" [routerLink]=" ['/home', id ] ">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"routerLink="/reservaciones"></ion-icon>
+
+          RESERVAR
+           
+    </ion-toolbar>
+  </ion-header>
+  
+<ion-content align="center" class="background">  
+  <div id="conte" align="center">
+    <ion-list lines="full">
+             
+          <ion-item>
+            <ion-label style="color: white;font-size: initial;">Áreas</ion-label>
+            <ion-select  [(ngModel)]="post.nombre" >
+              <ion-select-option  value="{{post.nombre}}" *ngFor="let post of registro">{{post.nombre  + '- ' + post.horariodias + '- ' + post.costo}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+        
+           
+      </ion-list>
+      <ion-item  color="dark">
+        <ion-label align="center"> Agregar Fecha</ion-label>
+        <ion-datetime [(ngModel)]="post.fecha" value="{{ post.fecha | date: 'yyyy-MM-dd'}}" min="1990-02" max="2030"></ion-datetime>
+      </ion-item>
+      <ion-list>
+
+      <ion-item >
+        <ion-label class="colors" position="floating" style="color: white;font-size: initial;">Estatus</ion-label>
+        <ion-select [(ngModel)]="post.estatus" okText="Okay" cancelText="Dismiss">
+          <ion-select-option value="Desocupado">Desocupado</ion-select-option>
+          <ion-select-option value="Ocupado">Ocupado</ion-select-option>
+       </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label  style="color: white;font-size: initial;" >Domicilio</ion-label>
+        <ion-select okText="Okay" cancelText="Dismiss" style="color: white;font-size: initial;"  [(ngModel)]="post.domicilio" >
+          <ion-select-option  value="{{post.domicilio}}" *ngFor="let post of todo">{{post.domicilio }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+    </ion-list>
+    <br>
+    <ion-button (click)="createPost(post)" fill="outline" expand="block" id="r" padding  expand="block" >
+      Reservar
+    </ion-button>
+  </div>
+
+  <!-- resiente  -->
+  <br>
+  <ion-card>
+    <ion-item color="">    
+      <ion-searchbar  style="color: white;font-size: initial;" type="number"  class="c" placeholder="Buscar Fecha..."
+      animated
+      (ionChange)="buscardireccion ( $event )"></ion-searchbar>   
+   </ion-item>
+  </ion-card>
+    
+
+  <ion-card>
+    <ion-list lines="none">
+      
+        <ion-item class="no-padding"  *ngFor="let area of areas | filter: textobuscar " >
+          <ion-label  style="color: white;font-size: initial;">
+            <h2  style="color: white;font-size: initial;">{{area.domicilio}}</h2>
+            <h2  style="color: white;font-size: initial;">{{area.nombre}}</h2>
+            <h2  style="color: white;font-size: initial;">{{area.fecha}}</h2>
+            <h2  style="color: white;font-size: initial;">{{area.estatus}}</h2>         
+          </ion-label>
+        </ion-item>  
+     
+    </ion-list>
+  </ion-card>
+
+
+
+
+</ion-content>
+
+
+
+

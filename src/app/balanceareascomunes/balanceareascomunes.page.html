@@ -1,0 +1,55 @@
+<ion-header>  
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"[routerLink]="['/home', id]">
+      <ion-icon slot="start" size="large" class="return" name="arrow-back"routerLink="/balancemenu"></ion-icon>
+  
+          BALANCE AREAS
+          
+    </ion-toolbar>
+  </ion-header>
+      
+  <ion-content padding class="background"  [fullscreen]="true" align="center">
+    <ion-card>
+   
+<br>
+    <ion-list>
+                <ion-label class="titulo">Pagos Area Común </ion-label>
+              <br><br>
+              <ion-item>
+                <ion-label  style="color: white;font-size: initial;">Ingresar Fecha</ion-label>
+                <ion-datetime style="color: white;font-size: initial;" [(ngModel)]="post.fecha" displayFormat="MM-YYYY"  value="15-12-1994"></ion-datetime>
+            </ion-item>  
+
+                <ion-item>
+                  <ion-label style="color: white;font-size: initial;">Domicilio</ion-label>
+                  <ion-select style="color: white;font-size: initial;" [(ngModel)]="post.domicilio" >
+                    <ion-select-option  value="{{post.domicilio}}" *ngFor="let post of registro">{{post.domicilio }}</ion-select-option>
+                  </ion-select>
+                </ion-item>
+                
+                <ion-item>
+                  <ion-label style="color: white;font-size: initial;">Concepto</ion-label>
+
+                  <!-- <ion-input style="color: white;font-size: initial;" placeholder="concepto" [(ngModel)]="post.concepto" class="color" ></ion-input> -->
+                  <ion-select style="color: white;font-size: initial;"  [(ngModel)]="post.concepto" >
+                    <ion-select-option  value="{{post.nombre}}" *ngFor="let post of registro2">{{post.nombre  + ': ' + post.horariodias }}</ion-select-option>
+                  </ion-select>
+                </ion-item>
+                <ion-item>
+                  <ion-label style="color: white;font-size: initial;">Importe</ion-label>
+                  <ion-select style="color: white;font-size: initial;"  [(ngModel)]="post.importe" >
+                  <ion-select-option  value="{{post.costo}}" *ngFor="let post of registro2">{{post.nombre  + ': $' + post.costo}}</ion-select-option>
+                </ion-select>
+                </ion-item>
+
+
+    </ion-list> 
+    <ion-row>
+      <ion-col size="12">
+        <ion-button expand="block" class="color" fill="outline" (click)="val(post)"  >Registrar</ion-button>
+    </ion-col>
+</ion-row>
+  </ion-card>
+
+  </ion-content>
+  

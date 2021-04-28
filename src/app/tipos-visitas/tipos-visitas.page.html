@@ -1,0 +1,49 @@
+<ion-header>  
+  <ion-toolbar  class="ion-text-center" color="primary" >
+    <img class="avatar" slot="end" src="\assets\icons\imagenlogo-Avatar.png" [routerLink]="['/home', id]">
+        <ion-icon class="return" slot="start" size="large" name="arrow-back"  [routerLink]="['/home', id]" ></ion-icon>
+       VISITAS
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content  class="background"  [fullscreen]="true" align="center">
+<ion-card id="conte" color="black"> 
+
+  <ion-button  name="acceso"
+               class="bordo"
+               size="medium"
+               expand="block"
+               [routerLink]="['/accesos']">                   
+  <div align="center">
+   <img src="\assets\icon\anadir-contacto.png">
+   <br>
+   <ion-label class="color" for="">Visitas Programadas</ion-label>
+  </div>
+  </ion-button>
+  <br>
+  <ion-button  name="acceso"
+               class="bord"
+               size="medium"
+               expand="block"
+               [routerLink]="['/realizadas-visitas']">                   
+  <div align="center">
+   <img src="\assets\icon\favoritos.png">
+   <br>
+   <ion-label class="color" for="">Visitas Realizadas</ion-label>
+  </div>
+  </ion-button>
+  <br>
+  <ion-button  name="acceso"
+               class="bordo"
+               size="medium"
+               expand="block"
+               [routerLink]="['/accesos-registrar-visita']">                   
+  <div align="center">
+   <img src="\assets\icon\adjuntar-archivo.png">
+   <br>
+   <ion-label class="color" for="">Registrar Visitas</ion-label>
+  </div>
+  </ion-button>
+</ion-card>
+</ion-content>

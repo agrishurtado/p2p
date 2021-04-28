@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"routerLink="/home">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"routerLink="/tipos-visitas"></ion-icon>
+     VISITAS 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content align="center" class="background">
+  <div id="conte" align="center">
+    <br>
+    
+    <br>
+    <ion-item class="items" color="success">
+      <ion-label class="subtitulo"> Visitas Realizadas</ion-label>
+    </ion-item>
+
+    
+  <ion-list lines="none">
+    <ion-item-sliding *ngFor="let visita of visitas; let indexOfelement=index;">
+      <ion-item class="no-padding">
+        <ion-label class="table" >
+          <!-- <pre class="div">{{indexOfelement + 1 }} {{ visita.nombre }} {{visita.horasalida.seconds*1000 | date: 'yyyy/MM/dd h:mm:ss a'}}</pre> -->
+          <ion-card class="div">
+            {{indexOfelement + 1 }}.- 
+            <h3>Nombre</h3>
+            {{visita.nombre }} <br> 
+            <h3>Domicilio</h3>
+            {{ visita.domicilio }} <br>
+            <h3>Entrada</h3>
+            {{visita.horaEntrada.seconds*1000 | date: 'yyyy/MM/dd h:mm:ss a'}}
+            <br>
+            <h3>Salida</h3>
+            {{visita.horasalida.seconds*1000 | date: 'yyyy/MM/dd h:mm:ss a'}}
+            <br>
+            <h3>Placas</h3>
+            {{visita.placas }} <br>
+            <h3>Observaciones</h3>
+            {{visita.obcesrvaciones }} <br> 
+
+          </ion-card>
+        </ion-label>
+      </ion-item>
+
+    
+
+    <ion-item-options side="end">
+      <ion-item-option color="danger"> 
+        <ion-icon slot="icon-only" name="trash" (click)="onRemove(visita.id)"></ion-icon>
+      </ion-item-option>
+    </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</div>
+</ion-content>

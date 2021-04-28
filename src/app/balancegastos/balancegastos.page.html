@@ -1,0 +1,104 @@
+<ion-header>  
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"[routerLink]="['/home', id]">
+      <ion-icon slot="start" size="large" class="return" name="arrow-back"[routerLink]="['/home', id]"></ion-icon>
+  
+          BALANCE GASTOS
+          
+    </ion-toolbar>
+  </ion-header>
+      
+  
+      
+    <ion-content padding class="background"  [fullscreen]="true" align="center">
+      <ion-card>
+      
+    
+      <ion-list>
+                  <ion-label class="titulo">Gastos </ion-label>
+                  <br>
+                  <br>
+                  <ion-item>
+                    <ion-label style="color: white;font-size: initial;" align="center">Ingresa Fecha</ion-label>
+                    <ion-datetime class="fecha" style="color: white;font-size: initial;" [(ngModel)]="post.fecha" displayFormat="MM-YYYY"  value="15-12-1994" ></ion-datetime>
+                  </ion-item>                  
+                  <ion-item>
+                    <ion-input placeholder="nombre" [(ngModel)]="post.nombre" class="color" > </ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-input placeholder="concepto"  [(ngModel)]="post.concepto" class="color" > </ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-input type="number" placeholder="importe"  [(ngModel)]="post.importe" class="color" > </ion-input>
+                  </ion-item>
+                  <!-- aqui debe de ir la imagen -->
+                  <!-- <ion-item>
+                    <ion-input placeholder="comprobante" class="color" > </ion-input>
+                  </ion-item> --> 
+                  <h1>Comprobante </h1>
+                  
+      <button id="añadir" (click)="loadImageFromDevice()"><input  id="file-input" accept="image/png, image/jpeg" style="font-size: x-small;">
+        <img src="../../assets/icon/adjuntar-archivo.png" id="icon2"/></button>
+  
+  
+      </ion-list> 
+      <ion-row>
+        <ion-col size="12">
+          <ion-button (click)="creategatos(post)" expand="block" class="color" fill="outline">Registrar</ion-button>
+      </ion-col>
+  </ion-row>
+  <!-- se agrega buscador  -->
+
+  <br>
+  <ion-item color="">    
+    <ion-searchbar  style="color: aliceblue;"  type="number" class="c" placeholder="Buscar Fecha..."
+    animated
+    (ionChange)="buscardireccion ( $event )"></ion-searchbar>
+
+ 
+ </ion-item>
+
+    </ion-card>
+    <ion-item-group >
+               
+      <ion-label class="subtitulo" width="100%" style="color: aliceblue;">Lista de gastos</ion-label>
+      <ion-input slot="end" class="colorsubtitulo" disabled="true" ></ion-input>
+  <ion-grid>
+      <ion-row style="margin-block-end: 20px;">
+         <ion-col class="titulo">
+             Nombre
+         </ion-col >
+         <ion-col class="titulo">
+             Fecha 
+         </ion-col>
+         <ion-col class="titulo">
+             Concepto
+         </ion-col>
+         <ion-col class="titulo">
+             Importe
+         </ion-col>
+      </ion-row>
+  </ion-grid>
+  <ion-list>
+      <ion-card *ngFor="let post of cuentas | busqueda: textobuscar ">
+          <ion-grid>
+              <ion-row>
+                  <ion-col class="contenido">
+                      {{post.nombre}}
+                  </ion-col>
+                  <ion-col size="3" class="contenido">
+                      {{post.fecha | date: "MM-yyyy"}} 
+                  </ion-col>
+                  <ion-col class="contenido">
+                      {{post.concepto}}
+                  </ion-col>
+                  <ion-col class="contenido">
+                      ${{post.importe}}.00
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+      </ion-card>
+  </ion-list>
+</ion-item-group>
+    </ion-content>
+    

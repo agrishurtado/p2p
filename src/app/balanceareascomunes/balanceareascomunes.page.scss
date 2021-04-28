@@ -1,0 +1,47 @@
+ion-content.background{
+  --ion-background-color: #000000 ;
+}
+
+ion-label.color{
+  
+  color: whitesmoke;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  margin:1rem auto;
+  max-width: 600px;
+}  
+
+.subtitulo{
+  color: black;
+}
+
+ion-toolbar{
+    font-size: 25px;
+}
+.avatar{
+    width: 10%;
+}
+
+.p{
+    color: whitesmoke;
+    
+}
+
+ion-input{
+  --placeholder-color: whitesmoke;
+  --placeholder-font-weight: 100%;
+  color: whitesmoke;
+}
+
+ion-button.color{
+    color: whitesmoke;
+}
+
+ion-label.titulo{
+  font-size: 25px;
+  color: whitesmoke;
+
+}

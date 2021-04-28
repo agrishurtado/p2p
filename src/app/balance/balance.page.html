@@ -1,0 +1,97 @@
+<ion-header>
+    <ion-toolbar class="ion-text-center" color="primary">
+        <img class="avatar" slot="end" src="\assets\icons\imagenlogo-Avatar.png" [routerLink]="['/home', id]">
+        <ion-icon slot="start" size="large" class="return" name="arrow-back" [routerLink]="['/balancesubtitulos', id] "></ion-icon>
+
+        BALANCE
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="background" > 
+    <br>   
+    <ion-item-group routerLink="/balancemenu" >
+        <ion-item-divider color="success">
+            <ion-label   class="subtitulo" slot="start">Ingresos</ion-label>
+            <ion-input [(ngModel)]="post.areascomunespgos" slot="end" class="colorsubtitulo" disabled="true" routerLink="balancemenu">${{ingresos}}.00</ion-input>
+
+        </ion-item-divider>       
+        <br>
+        <ion-card>
+            <ion-item >
+                <p class="p">Pagos Mantenimiento = </p>              
+                <ion-input [(ngModel)]="post.mantenimientopagos" class="color" disabled="true" routerLink="balancemenu">${{totalm}}.00</ion-input>
+            </ion-item>
+            <ion-item>
+                <p class="p">Pagos Areas Comunes = </p>
+                <ion-input [(ngModel)]="post.areascomunespgos" class="color" disabled="true" routerLink="balancemenu">${{total2}}.00</ion-input>
+            </ion-item>
+            <br>
+        </ion-card>
+    </ion-item-group>
+    <ion-col size="6" routerLink="/balancemenu">
+        <ion-button expand="block"  class="color" fill="outline">Registrar Ingreso</ion-button>
+    </ion-col>
+
+    <br>
+    
+    <ion-item-group >
+        <ion-item-divider color="success">
+            <ion-label class="subtitulo">Gastos</ion-label>
+            <ion-input slot="end" class="colorsubtitulo" disabled="true" >${{gastos}}.00</ion-input>
+        </ion-item-divider>
+        <br>    
+        <ion-col size="12" routerLink="/balancegastos">
+            <ion-button aria-disabled="" expand="block" class="color" fill="outline">Registrar Gasto</ion-button>
+        </ion-col>
+    </ion-item-group>
+
+    <ion-card>
+        <ion-row>
+            <ion-col size="6">
+                <p class="p">SALDO DEL MES</p>
+            </ion-col>
+            <ion-col size="5">
+                <ion-item lines="none">
+                    <ion-icon name="logo-usd" color="success" size="medium"></ion-icon>
+                    <ion-label class="color" fill="outline" >{{salmes}}</ion-label>
+
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+
+    <ion-card>
+        <ion-row>
+            <ion-col size="6">
+                <p class="p">SALDO EN CUENTA</p>
+            </ion-col>
+            <ion-col size="5">
+                <ion-item >
+                    <ion-icon name="logo-usd" color="success" size="medium"></ion-icon>
+                    <ion-label class="color" fill="outline" >{{madre}}
+                    </ion-label>
+                </ion-item>
+            </ion-col>          
+        </ion-row>
+        <ion-row>            
+        </ion-row>
+     <br/>        
+    </ion-card>
+
+    <br>
+    <ion-card>
+        <ion-list lines="none">
+          
+            <ion-item class="no-padding"  *ngFor="let post of post | filtrobalance: textobuscar " >
+              <ion-label  style="color: white;font-size: initial;">
+                <h2  style="color: white;font-size: initial;">{{post.fecha}}</h2>
+              </ion-label>
+            </ion-item>  
+         
+        </ion-list>
+      </ion-card>
+    
+    
+
+</ion-content>

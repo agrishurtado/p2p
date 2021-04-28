@@ -1,0 +1,84 @@
+<ion-header>  
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png" [routerLink]=" ['/home', ids ] ">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"routerLink="/balancesubtitulos"></ion-icon>
+
+    <ion-title>ESTATUS AUTORIZAR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content align="center" class="background">
+ 
+  <div id="conte" align="center">
+    <ion-card>
+    
+      <div id="conteazul" align="center">
+
+        
+        <ion-item>
+          <ion-label style="color: whitesmoke;">Estatus</ion-label>
+          <ion-select style="color: whitesmoke;" [(ngModel)]="post.status">
+            <ion-select-option value="Autorizados">Autorizado</ion-select-option>
+            <ion-select-option value="Rechazados">Rechazado</ion-select-option>
+          </ion-select>
+        </ion-item>
+      
+        <div id="conte1" align="center">
+      
+          <!-- solo se podra ingresar un registro por domicilio -->
+          <ion-item>
+            <ion-label style="color: whitesmoke;" position="floating">Concepto</ion-label>
+            <ion-input style="color: whitesmoke;" required [(ngModel)]="post.concepto"></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label style="color: whitesmoke;" position="floating">Importe</ion-label>
+            <ion-input style="color: whitesmoke;" required [(ngModel)]="post.importe"></ion-input>
+          </ion-item>
+           
+          
+          <ion-item>
+            <ion-label style="color: white;font-size: initial;">Mes</ion-label>
+            <ion-select style="color: white;font-size: initial;" [(ngModel)]="post.mes" >
+              <ion-select-option  value="{{post.mes}}" >{{post.mes}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label style="color: white;font-size: initial;">Año</ion-label>
+            <ion-select style="color: white;font-size: initial;" [(ngModel)]="post.year" >
+              <ion-select-option  value="{{post.year}}" >{{post.year}}</ion-select-option>
+            </ion-select>
+          </ion-item>
+          
+
+        
+
+          <ion-card >
+            <ion-label  style="color: whitesmoke;" position="floating">Imagen</ion-label>
+            <br>
+            <ion-button (click)="loadImageFromDevice()" >
+              <ion-icon lazy="true" slot="start" name="image" style="color: white; font-size: 20px;"></ion-icon>
+              Tomar evidencia.
+            </ion-button>
+              <br>
+             <img class="img" src="{{ post.image }}"> 
+            
+
+          </ion-card>
+          
+        </div>
+      </div>
+        
+  
+    </ion-card> 
+  </div>
+  <ion-fab  vertical="bottom" horizontal="end" slot="fixed">
+    <!-- <ion-fab-button  (click)="createpagosautorizados(post)"  (click)=" deletePost(id)" color="success" > -->
+      <ion-fab-button  (click)="val(post, id)" 
+       color="success" >
+
+      <ion-icon color="danger" name="save"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar class="ion-text-center" color="primary" >
+    <img class="avatar"  slot="end" src="\assets\icons\imagenlogo-Avatar.png"routerLink="/home">
+    <ion-icon slot="start" size="large" class="return" name="arrow-back"routerLink="/configuracion-config-condomino-eliminar"></ion-icon>
+
+    CONFIGURACIÓN EDITAR
+        
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="background">
+  <div id="d">
+<br>
+  <div id="conte"  align="center">
+
+      <h1 id="text">Datos de tu cuenta banacaria</h1>
+  
+      <div id="conte1" align="center">
+  
+        <ion-item >
+          <ion-label class="color" position="floating">Banco</ion-label>
+          <ion-input type="text" [(ngModel)]="post.banco" required ></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label class="color" position="floating">Cuenta</ion-label>
+          <ion-input type="text" [(ngModel)]="post.cuenta" required></ion-input>
+        </ion-item>
+        <ion-item >
+          <ion-label class="color" position="floating">Clave</ion-label>
+          <ion-input type="text"  [(ngModel)]="post.clave"></ion-input>
+        </ion-item>
+        
+        <ion-item >
+          <ion-label class="color" position="floating">Tarjeta</ion-label>
+          <ion-input type="text"  [(ngModel)]="post.tarjeta" ></ion-input>
+        </ion-item>
+       <br>
+  
+  
+   <ion-button (click)="updatePost(post)" fill="outline">Agregar</ion-button>
+       
+      </div>    
+    </div>
+  
+</div>
+
+</ion-content> 

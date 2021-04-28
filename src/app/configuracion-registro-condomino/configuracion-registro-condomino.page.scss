@@ -1,0 +1,140 @@
+#d{
+  height: auto;
+}
+  
+#conte{
+  height: auto;
+  padding-top: 20px ;     
+  margin: 0 auto;
+  transform: translateY(5px);
+  padding-block-end: 20px;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #0be9b1;
+}
+
+#contes{
+  height: auto;
+  padding-top: 20px ;     
+  margin: 0 auto;
+  transform: translateY(5px);
+  padding-block-end: 20px;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #0b46e9;
+}
+
+ 
+#conteazul{
+  height: auto;
+  padding-top: 20px ;     
+  margin: 0 auto;
+  transform: translateY(5px);
+  padding-block-end: 20px;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #0b73e9;
+}
+  
+ion-label.color{
+  color: whitesmoke;
+}
+ion-input{
+  color: whitesmoke;
+}
+
+#conte1{
+  height: 30%;
+  width: 90%;
+}
+
+#añadir{
+  width: 25%; 
+  border: 2px solid skyblue;
+  --background: transparent;
+  border-radius: 20%;
+  color: whitesmoke;
+}
+
+#añadirb{
+  width: 25%; 
+  border: 2px solid rgb(148, 95, 246);
+  --background: transparent;
+  border-radius: 20%;
+  color: whitesmoke;
+}
+
+#añadirs{
+  background-color: rgba(0, 0, 0, 0);
+  width: min-content;
+  height: min-content;
+  color: rgb(138, 243, 138);
+  padding-right: 40%;
+}
+
+#header{
+  width: 10%;
+  background-color: rgba(0, 0, 0, 0);
+}
+  
+#vaca{
+  height: 35px;
+  color: white;
+  font-weight: bold;
+}
+
+#text{
+  color: white;
+  font-weight: bold;
+}
+
+ 
+#icon2{
+  width: 50px;
+}
+
+#titulo{
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+ion-icon {
+  align-content: right;
+  font-size: 300%;
+}
+
+ion-content.background{
+  --ion-background-color: #16171a;
+}
+
+ion-toolbar{
+ 
+  font-size: 25px;
+}
+
+.return{
+  color: whitesmoke;
+  font-size: 25px;
+}
+
+ion-card.back{
+  --background: transparent;
+  text-align: center;
+}
+
+.avatar{
+  width: 35px;
+}
+
+.inv{
+  display: none;
+ // visibility: hidden;
+}
+
+input#file-input{
+  
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}

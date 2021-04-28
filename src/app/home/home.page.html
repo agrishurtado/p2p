@@ -1,0 +1,189 @@
+<ion-header [translucent]="true">
+  <ion-toolbar id="grad" mode="ios">
+    <ion-icon id="grad"    style="color: rgb(255, 255, 255);" ></ion-icon>
+    <ion-title id="grad"  style="color: rgb(255, 255, 255);">ADMINISTRADOR</ion-title>
+
+     
+        
+  </ion-toolbar>
+</ion-header>
+<ion-content  [fullscreen]="true" class="background" >
+<ion-card color="gray" align="center" mode="ios" disabled="{{ post.actdes }}">
+<ion-grid>
+  <ion-row class="top-10">
+    <ion-col size="6">
+      <ion-button  name="acceso"
+                   class="tamaño"
+                   size="medium"
+                   expand="block"
+                   [routerLink]="['/tipos-visitas']">                   
+                   <div align="center">
+                    <img src="\assets\icons\entrar.png">
+                    <br>
+                    <label class="color" for="">ACCESOS</label>
+                   </div>
+                            
+       </ion-button>
+  </ion-col>
+
+    <ion-col size="6">
+      <ion-button name="mensajes"
+                  class="tamaño"
+                  size="medium"
+                  disabled="{{ post.tipo }}"                  
+                  expand="block"
+                  [routerLink]="['/menumensajes']">
+                <div align="center">
+                    <img src="\assets\icons\mensaje-recibido.png">
+                    <br>
+                    <label for="">MENSAJES</label>
+                   </div>
+    </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button name="directorio"
+                  class="tamaño"
+                  size="medium"
+                  disabled="{{ post.tipo }}"
+                  expand="block"
+                  [routerLink]="['/directorio']">
+            <div align="center">
+              <img src="\assets\icons\guia-telefonica.png">
+              <br>
+              <label for="">DIRECTORIO</label>
+             </div>
+</ion-button>
+</ion-col>
+    
+    <ion-col size="6">
+      <ion-button name="encuestas"
+                  class="tamaño"
+                  size="medium"
+                  disabled="{{ post.tipo }}"
+                  expand="block"
+                  [routerLink]="['/encuestas']">
+                  <div align="center">
+                    <img src="\assets\icons\pruebas.png">
+                    <br>
+                    <label  for="">ENCUESTAS</label>
+                   </div>
+      </ion-button>
+    </ion-col>
+
+    <ion-col size="6">
+            <ion-button name="comunicados"
+                        class="tamaño"
+                        size="medium"
+                        disabled="{{ post.tipo }}"
+                        expand="block"
+                        [routerLink]="['/comunicados']">                
+                  <div align="center">
+                    <img src="\assets\icons\megafono.png">
+                    <br>
+                    <label for="">COMUNICADOS</label>
+                   </div>
+    </ion-button>
+    </ion-col>
+
+    <ion-col size="6">
+            <ion-button name="balance"
+                        class="tamaño"
+                        size="medium"
+                        disabled="{{ post.tipo }}"
+                        expand="block"
+                        [routerLink]="['/balancesubtitulos']">
+                  <div align="center">
+                    <img src="\assets\icons\barras-graficas.png">
+                    <br>
+                    <label for="">BALANCE</label>
+                   </div>
+    </ion-button>
+    </ion-col>
+
+    <ion-col size="6">
+            <ion-button name="clasificados"
+                        class="tamaño"
+                        size="medium"
+                        disabled="{{ post.tipo }}"
+                        expand="block"
+                        [routerLink]="['/clasificados']">
+                  <div align="center">
+                    <img src="\assets\icons\carro-de-la-compra.png">
+                    <br>
+                    <label for="">MARKET</label>
+                   </div>
+    </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button name="reservaciones"
+                  class="tamaño"
+                  size="medium"
+                  disabled="{{ post.tipo }}"
+                  expand="block"
+                  [routerLink]="['/reservaciones']">
+                  <div align="center">
+                    <img src="\assets\icons\term.png">
+                    <br>
+                    <label for="">RESERVACIONES</label>
+                   </div>
+</ion-button>
+    </ion-col>
+
+
+    <ion-col size="6">
+      <ion-button name="configuracion"
+                  class="tamaño"
+                  size="medium"
+                  expand="block"
+                  [routerLink]="['/configuracion']" >
+                  <div align="center">
+                    <img src="\assets\icons\engranaje.png">
+                    <br>
+                    <label for="">CONFIGURACIÓN</label>
+                   </div>
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button name="configuracion"
+                  class="tamaño"
+                  class="red"
+                  size="medium"
+                  expand="block"
+                  [routerLink]="['/sos']" >
+                  <div align="center">
+                    <img src="\assets\icon\boton-rojo.png">
+                    <br>
+                    <label for="">SOS</label>
+                   </div>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-card> 
+
+
+
+
+
+
+
+
+
+<!-- disabled="{{ post.tipo}}"
+disabled="{{ post.tipo}}"
+disabled="{{ post.tipo}}"
+disabled="{{ post.tipo}}"
+disabled="{{ post.tipo}}"
+disabled="{{ post.tipo}}"
+disabled="{{ post.tipo}}"
+disabled="{{ post.tipo}}" -->
+
+
+
+
+
+
+
+</ion-content>
+
+

@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar color="primary" >
+    <ion-row>
+      <ion-col size="2">
+        <ion-icon class="return" name="arrow-back"routerLink="/comunicados"></ion-icon>
+      </ion-col>
+
+      <ion-col align="center" size="8">
+
+        CREAR COMUNICADO
+
+      </ion-col>
+      <ion-col size="2">
+        <img [routerLink]="['/home', id]" src="\assets\icons\imagenlogo-Avatar.png">
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="background"  align="center">
+  <ion-card>
+    <ion-list lines="full">
+      <ion-item *ngIf="comunicado">
+        <ion-label class="color" position="floating" style="color: white;font-size: initial;">Título</ion-label>
+        <ion-input [(ngModel)]='comunicado.titulo' required style="color: white;"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="comunicado">
+        <ion-label class="color" position="floating" style="color: white;font-size: initial;">Fecha</ion-label>
+        <ion-datetime [(ngModel)]='comunicado.fechaHora' displayFormat="YYYY-DD-MM" style="color: white;">
+        </ion-datetime>
+      </ion-item>
+      <ion-item *ngIf="comunicado">
+        <ion-label class="color" position="floating" style="color: white;font-size: initial;">Mensaje</ion-label>
+        <ion-textarea rows="6" cols="20" required [(ngModel)]='comunicado.Mensaje' style="color: white;"></ion-textarea>
+      </ion-item>
+    </ion-list>
+    <ion-item>
+      <ion-label align="center" style="color: white;font-size: initial;">Agregar Imagen</ion-label>
+      <br>      
+    </ion-item>
+    <button id="añadir" (click)="loadImageFromDevice()"><input  id="file-input" accept="image/png, image/jpeg" style="font-size: x-small;">
+      <img src="../../assets/icons/im.png" id="icon2"/></button>
+
+    <!-- <ion-item>
+      <ion-icon id="imagen" name="images-sharp"></ion-icon>
+    </ion-item> -->
+  </ion-card>
+  <br>
+  <ion-button fill="outline" expand="block" id="r" padding expand="block" (click)="saveComunicado();">GUARDAR
+  </ion-button>
+</ion-content>
+<!-- <ion-content class="background">
+<ion-card >
+
+        <ion-item>
+          <ion-item color="dark">
+            <ion-label >Filtro por Año Y Mes</ion-label>
+            <ion-datetime displayFormat="YYYY-DD-MM" value="2012-12-15T13:47:20.789"></ion-datetime>
+          </ion-item>        </ion-item> 
+      
+
+<ion-input value="Titulo" ></ion-input>
+<ion-input value="Fecha Y Hora" ></ion-input>
+<ion-input value="Mensaje" ></ion-input>
+
+
+
+
+<ion-item>
+  <ion-icon id="imagen" name="images-sharp"></ion-icon>   <ion-input></ion-input>
+
+</ion-item>
+<ion-item>
+  <ion-button fill="outline" expand="block" padding id="conteButton" expand="block">Enviar</ion-button>
+</ion-item> 
+
+</ion-card>
+</ion-content> -->
